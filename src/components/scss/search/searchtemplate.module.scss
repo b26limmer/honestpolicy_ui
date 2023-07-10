@@ -1,0 +1,39 @@
+@import '../variables.module.scss';
+
+.container {
+  padding: 5% 15%;
+  background-color: #f2f6fa;
+}
+
+.carrierIndexContent {
+  @extend .columnContainer;
+  padding: 50px 20%;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: $xl) {
+  .carrierIndexContent {
+    padding: 50px 10%;
+  }
+}
+@media only screen and (max-width: $lg) {
+  .carrierIndexContent {
+    padding: 50px 1em;
+  }
+
+  .container {
+    padding: 5%;
+    background-color: #f2f6fa;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .carrierName {
+    margin-bottom: 30%;
+  }
+}
+
+@media only screen and (max-width: $sm) {
+  .container {
+    padding: 5%;
+  }
+}

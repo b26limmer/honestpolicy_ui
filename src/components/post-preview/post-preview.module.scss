@@ -1,0 +1,46 @@
+@import '../scss/variables.module.scss';
+
+.postPreview {
+  flex: 1;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  scroll-snap-align: center;
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.postPreviewLong {
+  flex: 3;
+}
+
+.postPreviewImage {
+  height: 380px;
+  margin-bottom: 16px;
+  img {
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+.postPreviewTitle {
+  font-weight: bold;
+  line-height: 1em;
+  font-size: 21px;
+  color: #081c33;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    color: $softGreen;
+  }
+}
+
+.articleName {
+  @extend .fontOneSemibold;
+  font-size: 18px;
+  color: $darkGreen;
+  text-decoration: underline;
+}

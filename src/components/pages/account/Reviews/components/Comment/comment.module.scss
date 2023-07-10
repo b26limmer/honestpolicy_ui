@@ -1,0 +1,188 @@
+@import '../../../../../scss/variables.module.scss';
+
+.commentCollapse {
+  @extend .shadow;
+  @include borderContainer;
+
+  background-color: white;
+  margin-bottom: 20px;
+}
+.commentCollapseItem {
+  padding: 15px 20px !important;
+  box-sizing: border-box !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.commentDialogActions {
+  display: flex;
+  justify-content: space-evenly !important;
+}
+.collapseHeaderTitle {
+  flex: 1;
+  display: flex;
+  label {
+    display: flex;
+    flex-direction: column;
+    font-stretch: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    span {
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+  svg {
+    font-size: 25px;
+    color: $softGrey;
+    margin-right: 10px;
+  }
+}
+
+.collapseHeaderTitleIcon {
+  min-width: auto !important;
+  margin-right: 10px;
+  display: flex !important;
+  align-items: center;
+  svg {
+    font-size: 20px;
+  }
+}
+
+.collapseHeaderRightSide {
+  display: flex;
+  svg {
+    margin-left: 20px;
+  }
+}
+
+.collapseHeaderRightSideCreateReview {
+  color: $darkGreen;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: underline;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.collapseHeaderRightSideRating {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  svg {
+    margin-left: 0px;
+  }
+}
+
+.commentCollapseRatingRoot {
+  color: $darkGreen;
+}
+
+.commentCollapseSubheader {
+  background-color: $softBackground;
+  padding: 15px 20px;
+  .commentSubheaderTitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .commentSubheaderScore {
+    font-size: 1.5rem;
+    color: $darkGreen;
+    font-weight: 500;
+    display: flex;
+    img {
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+    }
+  }
+}
+.commentSubheaderRightsideWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.commentSubheaderRightside {
+  @include borderContainer;
+  padding: 5px 10px;
+  font-size: 12px;
+  display: flex;
+  svg {
+    font-size: 1.1rem;
+    color: $darkGreen;
+    margin: auto;
+    padding-right: 5px;
+  }
+  span {
+    display: flex;
+    margin: auto;
+  }
+  .commentSubheaderRightsideScore {
+    font-weight: 600;
+    font-size: 15px;
+    margin-right: 3px;
+  }
+}
+
+.commentCollapseDetails {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  hr {
+    margin: 10px 0;
+  }
+  label {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    span {
+      font-size: 15px;
+      font-weight: 500;
+      color: $darkGreen;
+    }
+  }
+  .commentCollapseDetailScore {
+    justify-content: flex-start;
+    span {
+      margin: 0 3px;
+    }
+  }
+
+  .commentCollapseDetailReview {
+    @include borderContainer;
+    box-shadow: none;
+    padding: 20px;
+    font-size: 18px;
+  }
+}
+
+.commentCollapseEditReview {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: flex-end;
+  label {
+    font-size: 20px;
+    font-weight: 500;
+    color: $darkGreen;
+    text-decoration: underline;
+    &:hover {
+      cursor: pointer;
+    }
+    svg {
+      margin: 0 5px;
+    }
+  }
+}
+@media (max-width: $xs) {
+  .commentCollapseItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start !important;
+  }
+}

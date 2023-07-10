@@ -1,0 +1,119 @@
+@import '../../../../../scss/variables.module.scss';
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.iconTitleContainer {
+  display: flex;
+}
+.cardTitleContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 24px;
+}
+.cardTitle {
+  @extend .fontOneSemibold;
+  font-size: 24px;
+  line-height: 1em;
+  margin: 0;
+}
+.cardSubtitle {
+  @extend .text;
+  line-height: 1.6em;
+  margin: 0;
+  a {
+    color: $newGreen;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.avatar {
+  font-size: 28px;
+}
+.percentageCompleted {
+  @extend .text;
+  margin: 0;
+  font-size: 28px;
+  color: $newGreen;
+}
+.cardNav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  background-color: $mobileCarrierBackground;
+  box-sizing: border-box;
+  padding: 15px 0;
+  position: relative;
+}
+.cardNavMobileButton {
+  @extend .cardNav;
+  @extend .fontOneSemibold;
+  display: none;
+  outline: none;
+  border: 1px solid #e0e9e7;
+  border-left: none;
+  border-right: none;
+  justify-content: space-between;
+}
+.sortIcon {
+  font-size: 16px;
+}
+.cardLink {
+  @extend .fontOneSemibold;
+  font-size: 14px;
+  text-decoration: none;
+  color: $color-black-1;
+}
+.percentageCompletedBar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: $color-black-1;
+  width: calc(1% * var(--percentageCompleted));
+  height: 5px;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@media #{$mx-small} {
+  .cardNav {
+    padding: 1em;
+    position: absolute;
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+  .showMobileBar {
+    display: flex;
+  }
+  .cardNavMobileButton {
+    position: unset;
+    display: flex;
+    flex-direction: row;
+    padding: 15px 28px;
+  }
+  .cardLink {
+    margin: 1em 0;
+  }
+  .percentageCompleted,
+  .percentageCompletedBar {
+    display: none;
+  }
+  .cardTitleContainer {
+    margin-left: 17px;
+  }
+  .avatar {
+    font-size: 24px;
+  }
+  .cardTitle {
+    font-size: 20px;
+  }
+  .cardSubtitle {
+    font-size: 12px;
+  }
+  .addNewPolicyContainer {
+    position: relative;
+  }
+}

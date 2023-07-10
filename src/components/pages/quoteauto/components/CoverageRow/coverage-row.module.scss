@@ -1,0 +1,83 @@
+@import '../../../../scss/variables.module.scss';
+
+.coverageRow {
+  height: 105px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.coverageRowDetails {
+  width: 70%;
+  margin-right: 40px;
+  margin-left: 20px;
+}
+
+.coverageRightSide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coverageRowTitle {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #081c33;
+}
+
+.coverageRowDescription {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(#081c33, 0.6);
+}
+
+.coverageRowPrice {
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #081c33;
+  opacity: 0.6;
+}
+
+.coverageRowPriceDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coverageRowSwitch {
+  > * {
+    transform: scale(0.5);
+    > div {
+      min-width: unset;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .coverageRow {
+    height: auto;
+    padding: 15px;
+    align-items: center;
+  }
+  .coverageRightSide {
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .coverageRowDetails {
+    width: 100%;
+    margin-right: 0;
+  }
+  .coverageRowPriceDetails {
+    width: 100%;
+  }
+}

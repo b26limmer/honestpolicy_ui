@@ -1,0 +1,20 @@
+@import '../../scss/variables.module.scss';
+.plusIcon {
+  border-radius: 100%;
+  border: 2px solid $newGreen;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  background-color: $newGreen;
+  &:hover {
+    background-color: #fff;
+    color: $newGreen;
+  }
+}

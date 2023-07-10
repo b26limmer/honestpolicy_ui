@@ -1,0 +1,14 @@
+@import '../../../../scss/variables.module.scss';
+@import '../../quote-home.module.scss';
+
+.claimBlock {
+  display: flex;
+  flex-direction: row;
+  & > div {
+    flex: 1;
+  }
+}
+
+.claimBlockHidden {
+  display: none;
+}

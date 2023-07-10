@@ -1,0 +1,143 @@
+@import '../../scss/variables.module.scss';
+.loginPopup {
+  max-height: unset !important;
+  font-family: 'Montserrat';
+}
+.signUpInputs {
+  display: flex;
+  flex-direction: column;
+}
+.loginForm {
+  width: 464px;
+  padding: 38px 46px;
+  overflow: visible;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+}
+.papeComponent {
+  max-height: calc(100% - 2px) !important;
+}
+.loadingIndicator {
+  color: #fff !important;
+}
+.loginFormInner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  form {
+    width: 100%;
+    > * {
+      margin-top: 15px;
+    }
+  }
+  button {
+    width: 100%;
+  }
+  .loginFormNoAccountButton {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.loginFormNoAccount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginFormNoAccountTitle {
+  margin-bottom: 14px;
+  font-weight: 600;
+  color: #081c33;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.loginFormTitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #081c33;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.loginFormButton {
+  margin-top: 15px;
+  box-sizing: border-box;
+}
+
+.loginFormLogo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.loginFormKeepLoggedIn {
+  font-size: 16px;
+  line-height: 19px;
+  color: #081c33;
+  font-size: 400;
+}
+
+.forgotYourPasswordWrapper {
+  text-align: center;
+}
+
+.forgotYourPassword {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+  color: #00ad84;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+@media (max-height: 750px) {
+  .loginForm {
+    width: 400px;
+    padding: 0 20px 20px;
+    margin: 0 auto;
+  }
+  .loginFormInner {
+    & form > * {
+      margin-top: 10px;
+    }
+  }
+  .loginFormNoAccount {
+    margin-top: 0 !important;
+  }
+  .loginFormTitle {
+    margin-top: 0;
+  }
+}
+@media (max-width: $lg) {
+  .loginForm {
+    width: 400px;
+    max-width: 80vw;
+    padding: 0 20px 20px;
+    margin: 0 auto;
+  }
+  .loginFormTitle {
+    margin-top: 0;
+  }
+}
+@media (max-width: $sm) {
+  .loginForm {
+    width: 100%;
+    max-width: 100%;
+  }
+  .loginPopup {
+    div {
+      width: 100% !important;
+      box-sizing: border-box;
+    }
+  }
+}

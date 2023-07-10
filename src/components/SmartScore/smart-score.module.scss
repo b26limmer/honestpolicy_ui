@@ -1,0 +1,82 @@
+@import '../scss/variables.module.scss';
+
+.smartScore {
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.smartScoreShield {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 70px;
+  margin: 0 10px;
+  svg {
+    path {
+      fill: rgba(#4ca986, 0.16);
+    }
+  }
+}
+
+.smartScoreShieldRating {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+  color: #4ca986;
+  margin-top: -3px;
+}
+
+.smartScoreTitle {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 0;
+}
+
+.smartScoreActive {
+  .smartScoreShield {
+    svg {
+      path {
+        fill: #4ca986;
+      }
+    }
+  }
+  .smartScoreShieldRating {
+    color: white;
+  }
+}
+
+@media only screen and (max-width: $md) {
+  .smartScore {
+    &:last-child {
+      margin-right: 0 !important;
+    }
+  }
+}
+
+@media only screen and (max-width: $sm) {
+  .smartScore {
+    margin: 0;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .smartScoreShield {
+    width: 60px;
+  }
+}

@@ -1,0 +1,130 @@
+@import '../../scss/variables.module.scss';
+
+.footer {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  background-color: #22222a;
+}
+.logo {
+  display: flex;
+  width: 300px;
+  height: 45px;
+  align-items: center;
+}
+.footerLogo {
+  position: relative;
+}
+.footerLetterLogo {
+  margin-left: 10px;
+}
+.footerLeftColumn {
+  padding: 56px 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+}
+.footerIntroForm {
+  button {
+    border-radius: 0px 4px 4px 0;
+  }
+}
+.footerRightColumn {
+  @extend .footerLeftColumn;
+  height: auto;
+  background-color: #2b2b34;
+}
+.footerText {
+  @extend .fontOneRegular;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 1em;
+}
+.linksListContainer {
+  margin-top: 40px;
+  columns: 2;
+}
+.linkItem {
+  list-style: none;
+  margin-bottom: 1em;
+  a {
+    text-decoration: none;
+    @extend .footerText;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.copyrightMessage {
+  @extend .footerText;
+  margin: 40px 0 0;
+  padding-left: 40px;
+  a {
+    color: #fff;
+  }
+}
+.footerIntroDetails {
+  @extend .fontOneSemibold;
+  color: #fff;
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+.footerIntroInner {
+  padding: 0 !important;
+  padding-left: 0 !important;
+  form {
+    padding: 0;
+  }
+}
+.statesListContainer {
+  @extend .linksListContainer;
+  columns: 3;
+  width: 100%;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+@media #{$mx-large} {
+  .statesListContainer {
+    columns: 2;
+  }
+}
+@media #{$mx-medium} {
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footerLeftColumn {
+    width: 100%;
+  }
+  .statesListContainer {
+    columns: 3;
+  }
+}
+@media #{$mx-small} {
+  .footerLeftColumn {
+    padding: 1em;
+    align-items: center;
+  }
+  .linksListContainer,
+  .statesListContainer {
+    columns: 1;
+    padding-left: 0;
+    margin: 1em 0 0;
+  }
+  .statesListContainer {
+    margin-top: 2em;
+    :nth-child(n + 6) {
+      display: none;
+    }
+  }
+  .linkItem {
+    text-align: center;
+  }
+  .copyrightMessage {
+    padding: 0;
+    margin: 1em 0;
+    text-align: center;
+  }
+}

@@ -1,0 +1,59 @@
+@import '../variables.module.scss';
+
+.heroContainer {
+  height: fit-content;
+  padding-bottom: 50px;
+}
+
+.video {
+  margin: 40px 0 50px;
+  width: 50vw;
+}
+
+.heroSubtitle {
+  @extend .heroDescription;
+  font-size: 38px;
+  line-height: 1.3em;
+  margin-bottom: 0;
+  margin-top: 16px;
+}
+
+.requestInfoButton {
+  padding: 14px 70px;
+  font-size: 22px;
+}
+
+.link {
+  @extend .text;
+  font-size: 14px;
+  margin-top: 12px;
+  text-decoration: none;
+  color: $newGreen;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media #{$mx-large} {
+  .video {
+    width: 60vw;
+  }
+}
+
+@media #{$mx-medium} {
+  .heroSubtitle {
+    font-size: 20px;
+    margin-top: 1em;
+  }
+
+  .heroContainer {
+    height: calc(100vh - 70px);
+  }
+
+  .video {
+    margin: 100px 0;
+    width: 100%;
+  }
+}

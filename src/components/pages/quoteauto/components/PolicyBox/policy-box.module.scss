@@ -1,0 +1,98 @@
+@import '../../../../scss/variables.module.scss';
+
+.policyBox {
+  background: #3070aa;
+  width: 217px;
+  border-radius: 4px;
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.policyBoxHeader {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  padding: 14px 0;
+}
+
+.policyBoxBody {
+  background: #f5f8fc;
+  padding: 0 8px;
+}
+
+.policyBoxBodyTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #e1eaf3;
+}
+
+.policyBoxPaymentPrice {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 37px;
+  text-align: center;
+  color: #081c33;
+}
+
+.policyBoxPaymentType {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #081c33;
+  opacity: 0.6;
+}
+
+.policyBoxBodyBottom {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.policyBoxScoreNumber {
+  font-size: 32px;
+  line-height: 20px;
+  color: #3070aa;
+}
+
+.policyBoxScoreDescription {
+  font-size: 16px;
+}
+
+.policyBoxLearnMore {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #00ad84;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: $md) {
+  .policyBox {
+    width: 100%;
+    min-width: 217px;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: $sm) {
+  .policyBox {
+    min-width: 100%;
+    margin-right: 0;
+  }
+}

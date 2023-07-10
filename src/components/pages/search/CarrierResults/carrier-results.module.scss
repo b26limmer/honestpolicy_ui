@@ -1,0 +1,336 @@
+@import '../../../scss/variables.module.scss';
+
+.carrierCardContainer {
+  position: relative;
+}
+.carrierCard {
+  @include borderContainer;
+  @extend .columnContainer;
+  box-sizing: border-box;
+  padding: 15px 30px;
+  margin-bottom: 40px;
+  width: 100%;
+  text-decoration: none;
+  background-color: #fff;
+}
+.carrierCard:hover {
+  box-shadow: 0px 0px 5px 2px transparentize($color: $softGrey, $amount: 0.7);
+}
+.carrierNameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: wrap;
+  overflow: hidden;
+}
+.cardContent {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+.subtitle {
+  text-align: right;
+  font-size: 1.3em !important;
+  align-self: flex-start;
+  color: $blackish;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.logoColumn {
+  height: 100%;
+}
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  align-items: flex-start;
+}
+.scoresContainer {
+  height: 100%;
+}
+.scoreContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 2;
+  height: 100%;
+  justify-content: center;
+}
+.scoreTitle {
+  @extend .fontOneSemibold;
+  font-size: 14px;
+  margin: 5px 0 5px;
+  color: $blackish;
+}
+.scoreNumber {
+  @extend .fontOneBold;
+  font-size: 20px;
+  margin: 0;
+  color: $blackish;
+}
+.smartScoreContainer {
+  @extend .scoreContainer;
+  flex: 2;
+}
+.smartScoreShield {
+  @extend .container;
+  @extend .fontOneBold;
+  margin: 0;
+  font-size: 35px;
+  background-image: url('../../../../images/carrierTemplate/minishield.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 49% center;
+  height: 100px;
+  color: #fff;
+}
+.carrierResultsImage {
+  flex: 1;
+  justify-content: flex-start;
+  display: flex;
+}
+.carrierLogo {
+  max-width: 176px !important;
+  max-height: 75px !important;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.carrierLogoImg {
+  object-fit: contain !important;
+  max-width: 176px !important;
+  max-height: 75px !important;
+  width: 100%;
+  height: 100%;
+  min-width: none;
+}
+.addToCompareButton {
+  display: flex;
+  font-family: 'Montserrat';
+  color: #808080;
+  align-items: center;
+  justify-content: center;
+}
+.floatingAddToCompareButton {
+  cursor: pointer;
+  font-weight: 500;
+  width: unset !important;
+  border-radius: 5px;
+  padding: 1em;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  background: #00bf91;
+  color: white;
+  z-index: 10000;
+}
+carrierResultsImage carrierResultsImage .removeFromCompareButton {
+  background: #f44336;
+}
+
+.learnMoreButton {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+.scoreContainer {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.carrierResults {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+}
+
+.carrierResultsSmartScore {
+  display: flex;
+  flex: 2;
+}
+
+.carrierResultsActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 170px;
+  width: 100%;
+}
+
+.carrierResultsLeftSide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.carrierResultsButtons {
+  width: 100%;
+  > * {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    &:first-child {
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.carrierResultsLogoText {
+  display: none;
+}
+
+@media only screen and (max-width: $md) {
+  .subtitle {
+    font-size: 14px !important;
+    line-height: 17px;
+    text-align: right;
+    color: #000000;
+    margin-bottom: 0;
+  }
+  .carrierResultsActionsTitle {
+    max-width: 30%;
+    width: 100%;
+  }
+  .cardContent {
+    flex-direction: column;
+  }
+  .cardContent,
+  .scoreContainer,
+  .smartScoreContainer {
+    padding: 1em 0;
+    box-sizing: border-box;
+  }
+  .carrierLogo {
+    margin: 2em 0;
+  }
+  .mobileCarrierName {
+    align-items: baseline;
+    justify-content: center;
+  }
+  .scoreTitle {
+    min-width: 60%;
+    font-size: 14px;
+    text-align: center;
+  }
+  .scoreNumber,
+  .smartScoreShield {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .addToCompareButton {
+    color: white;
+  }
+
+  .carrierResults {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carrierResultsActions {
+    flex-direction: row;
+    max-width: 100%;
+    margin-top: 30px;
+    align-items: center;
+  }
+
+  .carrierResultsButtons {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    align-items: center;
+
+    * {
+      &:first-child {
+        margin-right: 10px;
+      }
+      margin-bottom: 0 !important;
+      height: max-content;
+    }
+  }
+  .carrierResultsLeftSide {
+    width: 100%;
+  }
+  .subtitle {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: $sm) {
+  .floatingAddToCompareButton {
+    font-size: 0.9em;
+    padding: 0.8em;
+  }
+  .carrierCard {
+    padding: 1em;
+    margin-bottom: 40px;
+  }
+  .smartScoreContainer {
+    padding: 0.5em 0.3em;
+  }
+  .smartScoreShield {
+    font-size: 25px;
+    height: 75px;
+  }
+  .subtitle {
+    text-align: unset;
+    align-self: center;
+    font-size: 1.2em !important;
+    margin-bottom: unset;
+  }
+  .carrierCard {
+    position: relative;
+  }
+  .scoresContainer {
+    justify-content: space-between !important;
+  }
+  .carrierCard {
+    padding: 5px 10px;
+    padding-bottom: 20px;
+  }
+  .carrierResultsActionsTitle {
+    display: none;
+  }
+  .carrierResultsLeftSide {
+    flex-direction: column;
+  }
+  .carrierResultsImage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .carrierResultsLogoText {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    color: #000000;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .carrierResultsButtons {
+    line-height: 17px;
+    * {
+      font-size: 14px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+  .carrierResultsSmartScore {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .carrierResultsImage {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}

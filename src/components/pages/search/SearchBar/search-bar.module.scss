@@ -1,0 +1,252 @@
+@import '../../../scss/variables.module.scss';
+
+@mixin borderContainer {
+  border: 1px solid transparentize($color: $softGrey, $amount: 0.7);
+  box-shadow: 0px 0px 5px 2px transparentize($color: $softGrey, $amount: 0.8);
+  border-radius: 5px;
+}
+.searchBar {
+  font-family: Montserrat, sans-serif;
+}
+
+.searchBarFilterLabel {
+  font-family: Montserrat, sans-serif;
+  margin-right: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #081c33;
+}
+
+.sortSelect {
+  max-width: 200px;
+  margin-bottom: 0;
+}
+
+.carrierIndexContent {
+  @extend .columnContainer;
+  padding: 50px 350px;
+  box-sizing: border-box;
+}
+
+.searchBarContainer {
+  @include borderContainer;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+}
+.searchBarContainer:hover {
+  box-shadow: 0px 0px 5px 2px transparentize($color: $softGrey, $amount: 0.7);
+}
+.searchInput {
+  @extend .fontOneSemibold;
+  color: $blackish;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-left: 1px;
+  border: none;
+  width: 80%;
+  height: 100%;
+  padding: 0 0;
+}
+.deleteSearchButton {
+  @extend .fontOneSemibold;
+  min-height: 30px;
+  min-width: 30px;
+  padding: 0;
+  margin: 0 5%;
+  background-color: $softBackground;
+  border-radius: 100%;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deleteSearchButton:hover {
+  cursor: pointer;
+  background-color: #e4e6ec;
+}
+.deleteSearchButton:focus {
+  outline: none;
+}
+.searchInput:focus {
+  outline: none;
+}
+.searchIcon {
+  object-fit: contain;
+  object-position: center;
+  height: 20px;
+}
+.searchButton {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  min-height: 100%;
+  width: 10%;
+}
+.searchButton:hover {
+  @include hover-supported;
+  transform: scale(1.1);
+}
+.searchButton:focus {
+  outline: none;
+}
+.selectContainer {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 10px 0 40px;
+  align-items: center;
+}
+.text {
+  margin-right: 30px;
+}
+.resultsCount {
+  @extend .text;
+  justify-self: flex-start;
+  flex: 1;
+}
+.sortingContainer {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  justify-content: center;
+}
+.compareButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  justify-content: flex-end;
+  select {
+    max-height: 40px;
+    min-height: 40px;
+  }
+  .formInputWrapper {
+    margin-bottom: 0;
+  }
+}
+.compareButton {
+  font-family: 'Montserrat';
+  margin-top: 15px;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1em;
+  min-height: 40px;
+  height: 40px;
+  padding: 0 10px;
+  margin: 0;
+  margin-left: 15px;
+  box-sizing: border-box;
+  background-color: #00bf91;
+  border: 2px solid #00bf91;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+.sectionLink {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e2eaf3;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-right: 10px;
+  padding: 20px 30px;
+  text-decoration: none;
+  margin-bottom: 5px;
+  img {
+    margin-left: 0;
+  }
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: whitesmoke;
+  }
+}
+.lineIcon {
+  width: 40px;
+  margin-left: 2em;
+  margin-right: 0.5em;
+  object-fit: contain;
+  max-height: 25px;
+}
+.selectStateInput {
+  @include borderContainer;
+  @extend .fontOneSemibold;
+  background-color: #fff;
+  padding: 1px 1em;
+  height: 40px;
+  color: $blackish;
+  min-width: 200px;
+  padding-right: 20px;
+}
+.selectStateInput:focus {
+  outline: none;
+}
+
+.resultsCount {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #3d3d55;
+}
+
+@media (max-width: $md) {
+  .compareButtonContainer {
+    justify-content: center;
+    margin-top: 15px !important;
+  }
+  .compareButton {
+    margin: 0;
+  }
+  .sortingContainer {
+    justify-content: flex-end;
+  }
+  .selectContainer {
+    margin-bottom: 10px;
+  }
+}
+@keyframes showCompareButton {
+  from {
+    bottom: -40px;
+  }
+  to {
+    bottom: 1.5em;
+  }
+}
+@media (max-width: $sm) {
+  .compareButtonContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1em 0 !important;
+  }
+  .compareButton {
+    box-sizing: border-box;
+    width: 90%;
+    position: fixed;
+    bottom: 1.5em;
+    z-index: 1000;
+    animation: showCompareButton 0.35s cubic-bezier(0.49, 1.29, 0.84, 1.41);
+  }
+  .sortSelect {
+    max-width: 100%;
+  }
+  .searchBarFilterLabel {
+    white-space: nowrap;
+  }
+}

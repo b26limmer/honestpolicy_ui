@@ -1,0 +1,105 @@
+@import '../../../scss/variables.module.scss';
+
+.compareHeader {
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 30px;
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  width: 100vw;
+  background-color: white;
+}
+
+.compareHeaderInner {
+  background-color: white;
+}
+
+.compareHeaderDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.compareHeaderLeftSide {
+  width: 250px;
+}
+
+.compareHeaderTitle {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  color: #000000;
+}
+
+.compareHeaderBoxes {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+@keyframes header-sticky-appear {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: $md) {
+  .compareHeaderSticky {
+    position: fixed;
+    top: 80px;
+    width: 100vw;
+    background-color: white;
+    z-index: 10000000;
+    // transition: all 0.3s ease-in-out;
+    padding-top: 0;
+    animation: header-sticky-appear 1 0.3s ease-in-out forwards;
+    // transform: all 0.3s ease-in-out;
+    .compareHeaderDetails {
+      display: none;
+    }
+    .headerCarrierBox {
+      height: 100px !important;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .compareHeaderTitle {
+    font-size: 20px;
+    line-height: 28px;
+    margin-right: 10px;
+  }
+  .compareHeaderLeftSide {
+    display: none;
+    width: 0;
+  }
+  .compareHeaderBoxes {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: $sm) {
+  .compareHeaderBoxes {
+    flex-direction: column;
+  }
+  .compareHeader {
+    position: static;
+  }
+  .compareHeaderTitle {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 10px;
+  }
+
+  .compareHeaderDetails {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,337 @@
+@import '../../../../../scss/variables.module.scss';
+
+.quotesCollapse {
+  @extend .shadow;
+  background-color: white;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.quotesCollapseItem {
+  padding: 22px !important;
+  box-sizing: border-box;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.quotesCollapseBox {
+  border: 1px solid grey;
+  text-align: right;
+  padding-right: inherit;
+  padding-left: inherit;
+}
+.quotesCollapseItemBox {
+  border: 1px solid grey;
+  display: flex;
+  padding: 0px 24px 24px 10px;
+  margin-right: 20px;
+  margin-left: 26px;
+  padding-top: 54px;
+}
+
+.quotesCollapseclickabletext {
+  float: right;
+  padding: 16px 22px 15px;
+  color: #009e79;
+}
+
+.quotesCollapseItemButton {
+  @include borderContainer;
+  &:hover {
+    background-color: $electricBlue !important;
+    color: white;
+    svg {
+      color: white;
+    }
+    .quotesCollapseItemScore {
+      span {
+        color: white;
+      }
+    }
+  }
+}
+
+.quotesList {
+  padding-top: 0 !important;
+}
+
+.quotesCollapseItemRightSide {
+  display: flex;
+  align-items: center;
+}
+
+.quotesCollapseItemDownSide {
+  align-items: center;
+}
+
+.quotesCollapseItemName {
+  display: flex;
+  flex-direction: row;
+  label {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    flex-direction: column;
+    span {
+      font-weight: 400;
+      font-size: 14px;
+    }
+    &:hover {
+      color: white;
+    }
+  }
+
+  svg {
+    font-size: 25px;
+    color: $softGrey;
+    margin-right: 10px;
+  }
+}
+
+.quotesCollapseItemIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.quotesCollapseItemScore {
+  display: flex;
+  flex: 1;
+  span {
+    flex: 1;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 19px;
+    color: #009e79;
+    margin-right: 100px;
+  }
+  img {
+    width: 35px;
+  }
+}
+
+.quotesCollapseItemPrice {
+  margin-right: 41px;
+}
+
+.quotesCollapseItemRatingIcon {
+  margin: 0px -2px !important;
+}
+
+.quotesCollapseItemRatingColor {
+  fill: #009e79 !important;
+  color: #009e79 !important;
+}
+
+.quotesCollapseItemTable {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.quotesCollapseItemHeader {
+  background: #f2f6fa;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 24px 24px;
+  padding-top: 22px;
+}
+.quotesCollapseItemRating {
+  color: #009e79;
+}
+
+.quotesCollapseItemPadding {
+  padding: 0 !important;
+  margin-top: -5px !important;
+}
+
+.quotesCollapseItemRow {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 24px;
+  & > div {
+    margin: 0.7rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.smartScoreArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-top: 1rem;
+}
+
+.smartScoreTag {
+  font-size: 14px;
+  margin: 0;
+  position: relative;
+  top: -54px;
+  right: 0px;
+}
+
+.smartScoreNumber {
+  @extend .fontOneSemibold;
+  margin: 0;
+  font-size: 22px;
+  position: relative;
+  top: -4 px;
+  color: #fff;
+}
+
+.smartScoreDescription {
+  flex: 2;
+  span {
+    font-size: 14px;
+  }
+
+  a {
+    display: flex;
+    font-weight: 600;
+    color: $darkGreen;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+}
+
+.smartScore {
+  @extend .columnContainer;
+  @extend .fontOneSemibold;
+  font-size: 50px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120px;
+  flex: 1;
+}
+
+.quotesCollapseItemTableCell {
+  display: flex;
+  justify-content: space-between;
+  svg {
+    color: $darkGreen;
+  }
+}
+
+.getQuoteButton {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 0 20px;
+  button {
+    width: 300px;
+    margin: auto;
+  }
+
+  span {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    label {
+      color: $darkGreen;
+    }
+  }
+}
+
+.quotesCollapseItemTableCellActive {
+  color: #009e79;
+  font-weight: 600;
+}
+
+.quotesCollapseMobileRowHeader {
+  background: #f2f6fa;
+  padding: 7px 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #009e79;
+  padding: 10px 20px;
+}
+
+.quotesCollapseMobileList {
+  padding: 10px 20px;
+  padding-bottom: 30px;
+}
+
+.quotesCollapseMobileListItem {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e1eaf3;
+  padding: 11px 0;
+}
+
+.quotesCollapseMobileListItemKey {
+  color: rgba(#465566, 0.75);
+  font-weight: 600;
+}
+
+.quotesCollapseMobileListItemValue {
+  font-weight: 400;
+  size: 14px;
+  color: $color-black-1;
+  line-height: 70 (5);
+  font-family: Montserrat;
+}
+
+.quotesCollapseMobile {
+  display: none;
+}
+
+.quotesCollapseBottom {
+  margin: 1rem 0.3rem;
+}
+
+@media (max-width: $md) {
+  .quotesCollapseMobile {
+    display: block;
+  }
+  .quotesCollapseItemIcon {
+    top: 15px;
+    transform: none;
+  }
+  .quotesCollapseItemRightSide {
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  .quotesCollapseItemPrice {
+    margin-right: 0;
+  }
+  .quotesCollapseItemScore {
+    flex: 1;
+  }
+  .quotesCollapseItemTable {
+    display: none;
+  }
+  .quotesCollapseMobileTable {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: $xs) {
+  .quotesCollapseItemRightSide {
+    flex-direction: column;
+  }
+  .quotesCollapseItem {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .quotesCollapseItemScore {
+    img {
+      width: 25px;
+      height: 30px;
+    }
+  }
+}

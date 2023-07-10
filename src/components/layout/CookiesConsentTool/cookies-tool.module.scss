@@ -1,0 +1,75 @@
+@import '../../scss/variables.module.scss';
+.cookiesConsentToolContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px 2px transparentize($color: $softGrey, $amount: 0.8);
+  overflow-y: scroll;
+  justify-content: center;
+  z-index: 10;
+}
+.hideTool {
+  display: none;
+}
+.sectionHead {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.acceptBtn {
+  margin-left: 1em;
+  background-color: $softGreen !important;
+  color: $softBackground !important;
+  &:hover {
+    background-color: $softBackground !important;
+    color: $softGreen !important;
+  }
+}
+.section {
+  border-top: 2px solid $strongBlue;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 0;
+  p {
+    @extend .text;
+    margin: 0;
+  }
+  h2,
+  h3 {
+    @extend .subtitle;
+    font-size: 16px;
+  }
+}
+.cookiesTitle {
+  @extend .subtitle;
+  font-size: 16px;
+  margin: 0;
+}
+.brief {
+  @extend .text;
+  margin: 1em 0;
+}
+.savePreferencesContainer {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: 1em;
+}
+@media (max-width: $sm) {
+  .cookiesConsentToolContainer {
+    width: 100%;
+  }
+}

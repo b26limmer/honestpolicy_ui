@@ -1,0 +1,36 @@
+@import '../../../../scss/variables.module.scss';
+@import '../../quote-home.module.scss';
+
+.alarmInfoBlock {
+  display: flex;
+  flex-direction: row;
+  & > div {
+    flex: 1;
+  }
+}
+.featureOptionsContainer {
+  margin-bottom: 0;
+}
+.alarmInfoBlockHidden {
+  display: none;
+}
+.optionsContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: -13px;
+  box-sizing: border-box;
+  padding: 0 1em;
+  border: 2px solid #99aab5;
+  border-top: none;
+  margin-bottom: 1em;
+  .roofInfoBlockChild {
+    margin-bottom: 1em;
+  }
+  .roofInfoBlockChild:last-child {
+    margin-bottom: 24px;
+  }
+  .roofInfoBlockChild:nth-child(1n + 2) {
+    margin-top: 0;
+  }
+}

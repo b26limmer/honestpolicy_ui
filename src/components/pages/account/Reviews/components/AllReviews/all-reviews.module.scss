@@ -1,0 +1,52 @@
+@import '../../../../../scss/variables.module.scss';
+
+.allReviewsHead {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.allReviewsTitle {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.singleReviewBody {
+  display: flex;
+  align-items: center;
+}
+
+.reviewDescription {
+  @extend .text;
+  flex: 3;
+}
+.reviewDataContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.likeButton {
+  margin: 0;
+}
+
+.reviewDataContainer {
+  width: 100%;
+}
+
+.seeMoreContainer {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  button {
+    background-color: transparent;
+  }
+}

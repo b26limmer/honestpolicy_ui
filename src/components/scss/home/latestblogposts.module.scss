@@ -1,0 +1,128 @@
+@import '../variables.module.scss';
+.container {
+  background-color: $softBackground;
+  min-height: 50vh;
+  flex-direction: column;
+  padding: 50px 0;
+  margin: 50px 0 0;
+}
+.subtitle {
+  position: relative;
+  padding: 10px 0;
+  margin: 0 0 20px;
+}
+.subtitle:before {
+  content: '';
+  position: absolute;
+  left: calc(50% - 25px);
+  top: 0;
+  height: 0;
+  width: 50px;
+  border: 2px solid $softGreen;
+}
+.postsContainer {
+  @extend .container;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.post {
+  @extend .iconed-card;
+  @extend .shadow;
+  padding: 0;
+  background-color: #fff;
+  height: 300px;
+  text-decoration: none;
+  color: #000;
+}
+.postImg {
+  height: 45%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.postTextContainer {
+  padding: 10px 15px 20px;
+}
+.postDate {
+  @extend .text;
+  color: $softGrey;
+  font-size: 12px;
+  margin: 0 0 10px;
+  text-align: left;
+  width: 100%;
+}
+.postTitle {
+  @extend .fontOneSemibold;
+  color: $strongBlue;
+  font-size: 15px;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+.postBody {
+  @extend .postDate;
+  margin: 10px 0;
+}
+.reusableButton {
+  width: 150px;
+}
+@media only screen and (max-width: $xl) {
+  .postsContainer {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: $lg) {
+  .post {
+    min-width: unset;
+    width: 210px;
+  }
+  .postTitle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .postDate {
+    margin: 0;
+  }
+  .postBody {
+    margin: 5px 0;
+  }
+}
+@media only screen and (max-width: $md) {
+  .postsContainer {
+    flex-direction: column;
+  }
+  .post {
+    width: 90%;
+    height: 350px;
+    max-width: 300px;
+  }
+  .postTitle {
+    font-size: 18px;
+  }
+  .postBody {
+    font-size: 15px;
+  }
+}
+@media #{$mq-xlarge} {
+  .container {
+    padding: 100px 0;
+  }
+  .post {
+    height: 550px;
+    width: 30%;
+  }
+  .postDate {
+    font-size: $base-font-size * 0.8;
+  }
+  .postTitle {
+    font-size: $base-font-size * 1;
+  }
+}

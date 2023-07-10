@@ -1,0 +1,91 @@
+@import '../../scss/variables.module.scss';
+
+.formBlock {
+  margin: 24px 0;
+  transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+  opacity: 0.2;
+  pointer-events: none;
+  user-select: none;
+}
+
+.questionIcon {
+  cursor: pointer;
+  margin-left: 0.5em;
+}
+
+.tooltip {
+  @include borderContainer;
+  background-color: $white;
+  bottom: 30px;
+  left: 25%;
+  padding: 1em;
+  position: absolute;
+  width: 50%;
+
+  p {
+    margin: 0;
+    text-align: justify;
+  }
+}
+
+.formBlockAnimation {
+  animation: slideIn 0.35s 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.formBlockActive {
+  transition: all 0.1s cubic-bezier(0, 0, 0.2, 1);
+  opacity: 1;
+  pointer-events: initial;
+  user-select: initial;
+}
+
+@keyframes slideIn {
+  0% {
+    // opacity: 0;
+    transform: translateY(50vh);
+  }
+
+  80% {
+    // opacity: 0.3;
+    transform: translateY(0);
+  }
+
+  100% {
+    // opacity: 0.3;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFull {
+  0% {
+    opacity: 0;
+    transform: translateY(50vh);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    // opacity: 0.3;
+    transform: translateY(0);
+  }
+}
+
+.formBlockTitle {
+  @extend .fontOneMedium;
+  align-items: center;
+  color: RGB(61, 61, 87);
+  display: flex;
+  font-size: 15px;
+  justify-content: space-between;
+  line-height: 19px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.formBlockMain {
+  display: block;
+}

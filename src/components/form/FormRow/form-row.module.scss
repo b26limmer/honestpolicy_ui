@@ -1,0 +1,20 @@
+@import '../../scss/variables.module.scss';
+
+.formRow {
+  display: flex;
+  justify-content: space-between;
+  > *:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: $sm) {
+  .formRow {
+    flex-direction: column;
+  }
+  .formRow{
+    > *:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+}

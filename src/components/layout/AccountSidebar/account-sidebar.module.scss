@@ -1,0 +1,76 @@
+@import '../../scss/variables.module.scss';
+
+.root {
+  width: 100%;
+}
+.backdrop {
+  z-index: -1;
+}
+
+.accountSidebar {
+  top: -1px !important;
+  height: 100%;
+  width: 256px;
+  border-right: 1px solid #e2eaf3;
+}
+.quotesButton {
+  width: 100%;
+  margin-top: 21px;
+}
+
+.accountSidebarLogo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  img {
+    max-width: 190px;
+  }
+}
+
+.accountSidebarItems {
+  width: 100%;
+  padding-top: 60px !important;
+}
+
+.accountSidebarInner {
+  height: 100%;
+  padding: 0 16px;
+}
+
+.accountSidebarMobile {
+  display: none;
+  position: relative;
+}
+
+.accountSidebarMobile {
+  height: 50px;
+  width: 100vw;
+  position: absolute;
+  top: 65px;
+  background-color: #fff;
+  box-shadow: inset 0px -1px 0px #e1eaf3;
+}
+
+.accountSidebarMobileLinks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+@media (max-width: $md) {
+  .accountSidebar,
+  .root {
+    display: none;
+  }
+
+  .accountSidebarMobile {
+    display: block;
+    .accountSidebarInner {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

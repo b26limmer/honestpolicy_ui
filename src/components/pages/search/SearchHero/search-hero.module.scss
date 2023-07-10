@@ -1,0 +1,53 @@
+@import '../../../scss/variables.module.scss';
+
+.searchHero {
+  height: 248px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+.searchHeroBackgroundWrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.gatsbyImgWrapper {
+  height: 100%;
+}
+.searchHeroInner {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.searchHeroTitle {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2.4em;
+  color: white;
+  font-weight: bold;
+}
+
+.searchHeroForm {
+  max-width: 460px;
+  width: 100%;
+}
+
+@media only screen and (max-width: $md) {
+  .searchHero {
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: auto;
+  }
+  .searchHeroTitle {
+    font-size: 1.4rem;
+  }
+}

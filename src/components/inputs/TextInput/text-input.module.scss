@@ -1,0 +1,38 @@
+@import '../../scss/variables.module.scss';
+.formTextInput {
+  box-sizing: border-box;
+  margin: 10px 0;
+  flex: 1;
+  span {
+    display: none;
+  }
+}
+.textInput {
+  @extend .fontOneRegular;
+  font-size: 18px;
+  box-sizing: border-box;
+  min-height: 50px;
+  padding: 0 14px;
+  color: #000;
+  border: 2px solid $borderGrey;
+  border-radius: $radius;
+  width: 100%;
+  flex: 1;
+}
+.hasButton {
+  border-radius: $radius 0 0 $radius;
+  &:focus {
+    border-radius: $radius 0 0 $radius;
+    outline: none;
+    border: 2px solid #000;
+  }
+}
+span.errors {
+  @extend .fontOneRegular;
+  display: flex;
+  color: red;
+  font-size: 0.8rem;
+}
+.errorInput {
+  border: 2px solid red;
+}

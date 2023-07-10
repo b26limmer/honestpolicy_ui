@@ -1,0 +1,61 @@
+@import '../../../scss/variables.module.scss';
+
+.getQuotesBtn {
+  width: 250px;
+  margin: 10px 0;
+}
+.dashboardLayoutInner {
+  background: linear-gradient(180deg, #fff 0%, #f1f9f9 100%);
+}
+.profileEditLink {
+  font-size: 14px;
+  @extend .fontOneSemibold;
+  &:hover {
+    cursor: pointer;
+  }
+  svg {
+    color: $softGreen;
+    margin-right: 5px;
+  }
+  a {
+    text-decoration: underline;
+    color: $darkGreen;
+  }
+}
+
+.accountProfile {
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.accountProfileInner {
+  box-sizing: border-box;
+}
+
+.profileDate {
+  display: flex;
+  justify-content: flex-end;
+  span {
+    font-size: 12px;
+  }
+}
+.accountProfileInnerHeader {
+  margin-bottom: 1rem;
+}
+
+.accountProfileInnerHeaderName {
+  @extend .fontOneSemibold;
+  font-size: 18px;
+}
+
+@media (max-width: $sm) {
+  .profileQuotesCardRoot {
+    margin-top: 2rem;
+  }
+  .accountProfile {
+    padding: 1em;
+  }
+  .profileDate {
+    justify-content: flex-start;
+  }
+}

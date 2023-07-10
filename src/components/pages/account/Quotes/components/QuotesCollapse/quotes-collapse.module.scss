@@ -1,0 +1,301 @@
+@import '../../../../../scss/variables.module.scss';
+
+$gradient-initial: #f5f9fa;
+$gradient-final: #e7f0f4;
+
+.quotesCollapse {
+  @extend .shadow;
+  background-color: white;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.unavailableCarrierCard {
+  background: linear-gradient(180deg, gradient-initial, $gradient-final);
+}
+.carrierLogoContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100px;
+  margin-right: 45px;
+}
+.carrierLogo {
+  max-width: 100px;
+  max-height: 30px;
+  object-fit: contain;
+}
+.notFoundCarrierName {
+  @extend .fontOneSemibold;
+  margin: 0;
+  line-height: 1em;
+}
+.quotesCollapseItem {
+  padding: 22px !important;
+  box-sizing: border-box;
+  display: flex !important;
+  cursor: pointer;
+  justify-content: space-between !important;
+  @include borderContainer;
+  &:hover {
+    background-color: $electricBlue !important;
+    color: white;
+    label,
+    span {
+      color: white;
+    }
+    img {
+      filter: grayscale(100%) invert(100%);
+    }
+    svg {
+      color: white;
+    }
+    .quotesCollapseItemPrice {
+      color: #fff;
+    }
+    .quotesCollapseItemScore {
+      span {
+        color: white;
+      }
+    }
+  }
+}
+
+.quotesList {
+  padding-top: 0 !important;
+}
+
+.quotesCollapseItemRightSide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.marginTopButton {
+  margin-top: 20px;
+}
+.loadingContainer {
+  margin-left: 90px;
+  margin-top: 20px;
+}
+.quotesCollapseItemName {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex-direction: row;
+  label {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 19px;
+    color: $color-black-1;
+    display: flex;
+    flex-direction: column;
+    &:hover {
+      color: white;
+    }
+    span {
+      color: $color-black-1;
+      font-weight: 400;
+      font-size: 14px;
+      &:hover {
+        color: white;
+      }
+    }
+    &:hover {
+      color: white;
+    }
+  }
+
+  svg {
+    font-size: 25px;
+    color: $softGrey;
+    margin-right: 10px;
+  }
+}
+
+.quotesCollapseItemIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.quotesCollapseItemScore {
+  display: flex;
+  width: 40%;
+  span {
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 19px;
+    color: #009e79;
+    margin-right: 100px;
+  }
+  img {
+    width: 35px;
+    object-fit: contain;
+    margin-right: 20px;
+  }
+}
+
+.quotesCollapseItemPrice {
+  margin-right: 41px;
+  color: $newGreen;
+  font-size: 24px;
+}
+
+.quotesCollapseItemRatingIcon {
+  margin: 0px -2px !important;
+}
+
+.quotesCollapseItemRatingColor {
+  fill: #009e79 !important;
+  color: #009e79 !important;
+}
+
+.quotesCollapseItemTable {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.quotesCollapseItemPadding {
+  padding: 0 !important;
+  margin-top: -5px !important;
+}
+.aboutCarrierContainer {
+  display: flex;
+  flex-direction: column;
+  p {
+    @extend .fontOneRegular;
+    color: $color-black-1;
+    font-size: 14px;
+    margin-top: 0;
+  }
+  a {
+    display: flex;
+    font-weight: 600;
+    color: $darkGreen;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+}
+.getQuoteButton {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  button {
+    max-width: 100%;
+    width: 300px;
+  }
+  span {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 10px;
+    label {
+      color: $darkGreen;
+    }
+  }
+}
+.bottom {
+  background-color: #fff;
+}
+.quotesCollapseBottom {
+  padding: 40px 22px 45px;
+}
+.scoresSection {
+  padding: 0 22px;
+}
+.scoreContainer {
+  display: flex;
+  max-width: 49% !important;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 12px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 2px solid #ecf6f4;
+  margin-bottom: 26px !important;
+  h4 {
+    @extend .fontOneSemibold;
+    font-size: 20px;
+    margin: 0;
+    color: $color-black-1;
+    text-align: left;
+  }
+  p {
+    @extend .fontOneSemibold;
+    font-size: 32px;
+    margin: 0;
+    text-align: left;
+    color: $newGreen;
+  }
+  .complaintsScore {
+    font-size: 20px;
+  }
+}
+@media (max-width: $md) {
+  .quotesCollapseItemIcon {
+    top: 15px;
+    transform: none;
+  }
+  .quotesCollapseItemRightSide {
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  .quotesCollapseItemPrice {
+    margin-right: 0;
+  }
+  .quotesCollapseItemScore {
+    flex: 1;
+  }
+  .quotesCollapseItemTable {
+    display: none;
+  }
+}
+
+@media (max-width: $sm) {
+  .quotesCollapseItemName {
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-right: 10px;
+  }
+  .getQuoteButton {
+    margin: 2em 0 0;
+    width: 100%;
+    button {
+      margin-bottom: 1em;
+      width: 100%;
+    }
+  }
+  .scoresSection {
+    padding: 0 1em;
+  }
+  .quotesCollapseBottom {
+    padding: 26px 1em 22px;
+  }
+  .scoreContainer {
+    width: 100%;
+    max-width: unset !important;
+    padding: 1em;
+    margin-bottom: 12px !important;
+    h4 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  .complaintsScore {
+    text-align: right !important;
+    font-size: 12px !important;
+  }
+  .quotesCollapseItemScore {
+    img {
+      width: 25px;
+    }
+  }
+}

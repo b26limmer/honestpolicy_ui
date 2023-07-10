@@ -1,0 +1,281 @@
+@import '../variables.module.scss';
+
+.modalTitle {
+  font-family: 'Montserrat';
+  color: #1a1919;
+  font-size: 36px;
+  letter-spacing: -1.5px;
+  line-height: 43px;
+  text-align: center;
+
+  @media (max-width: $md) {
+    font-size: 18px;
+    letter-spacing: -0.75px;
+    line-height: 22px;
+    padding-top: 20px;
+  }
+}
+
+.customerReviewForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: $md) {
+    padding: 0;
+  }
+}
+
+.inputDiv {
+  margin-bottom: 38px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+
+  @media (max-width: $md) {
+    justify-content: flex-start;
+    margin-bottom: 17px;
+    width: 100%;
+  }
+
+  label {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 29px;
+    width: auto;
+    display: inline-block;
+    text-align: right;
+    white-space: wrap;
+    margin-right: 16px;
+    padding-bottom: 10px;
+
+    @media (max-width: $md) {
+      width: 100%;
+      max-width: 362px;
+      text-align: left;
+      font-size: 12px;
+      letter-spacing: -0.67px;
+      line-height: 14px;
+      margin-right: 0px;
+    }
+  }
+}
+
+.dialogContentContainer {
+  padding-top: 0 !important;
+  padding-bottom: 50px !important;
+}
+
+.submitCont {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+
+  .submitBtn {
+    @extend .reusableButton;
+    @extend .shadow;
+    width: 150px;
+    height: 45px !important;
+    margin: 2em 0 0;
+    margin-top: 12px;
+  }
+
+  .cancelBtn {
+    width: 150px;
+    height: 45px;
+    margin-top: 12px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #00ad84;
+    border: 1px solid #e2eaf3;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: unset;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: #00ad84;
+      color: white;
+    }
+  }
+}
+
+.inputCont {
+  width: 250px;
+  margin: 0;
+  padding: 2px;
+  border: 2px solid $softGreen;
+  display: flex;
+
+  @media (max-width: $md) {
+    margin-top: 8px;
+    width: 250px;
+  }
+
+  @media (max-width: $sm) {
+    width: 200px;
+  }
+}
+
+.inputContGroup {
+  border: none !important;
+  flex: 1;
+}
+
+.inputContSelected {
+  background-color: $softGreen !important;
+  span {
+    color: white;
+  }
+}
+
+.inputContLabel {
+  color: black;
+}
+
+.inputSelect {
+  border: 1px solid transparentize($color: $softGrey, $amount: 0.7);
+  min-width: 400px;
+  @media (max-width: $md) {
+    margin-top: 8px;
+    min-width: 200px;
+  }
+}
+
+input.reviewInput {
+  height: 32px;
+  width: 358px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 2px solid #808080;
+  padding: 0;
+  text-indent: 10px;
+  font-family: 'Montserrat';
+
+  @media (max-width: $md) {
+    width: 100%;
+    padding-left: 0px;
+  }
+}
+
+.dialogTitle {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 72px !important;
+  padding-bottom: 60px !important;
+
+  @media (max-width: $md) {
+    padding-top: 57px !important;
+    padding-bottom: 22px !important;
+  }
+
+  h2 {
+    @media (max-width: $md) {
+      max-width: 400px;
+      text-align: flex-start;
+    }
+  }
+}
+
+.textAreaCont {
+  width: 100%;
+  margin: 0;
+  margin-top: 4px;
+
+  @media (max-width: $md) {
+    width: 100%;
+  }
+}
+
+textarea.reviewTextArea {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid transparentize($color: $softGrey, $amount: 0.7);
+  resize: none;
+  text-indent: 10px;
+  font-family: 'Montserrat';
+
+  @media (max-width: $md) {
+    margin-top: 8px;
+    width: calc(100% - 14px);
+  }
+}
+
+.rateContainer {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: $md) {
+    width: calc(100% - 14px);
+    div {
+      padding: 0px;
+    }
+  }
+}
+
+.rateContainerInner {
+  display: flex;
+
+  div {
+    background-color: $softerGreen;
+    border-radius: 2px !important;
+    margin: 5px;
+    padding: 3px;
+
+    span {
+      color: $softGreen !important;
+    }
+  }
+
+  @media (max-width: $md) {
+    justify-content: flex-start;
+    margin-top: 10px;
+    div {
+      padding: 0px;
+    }
+  }
+
+  @media (max-width: $sm) {
+    div {
+      height: 25px;
+      margin: 1px;
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 29px;
+    border-radius: 50%;
+    color: #fff;
+    width: 29px;
+    cursor: pointer;
+
+    &.selectedRate {
+      background: #00bf91;
+
+      span {
+        color: #fff !important;
+      }
+    }
+
+    span {
+      color: #818187;
+      font-family: 'Montserrat';
+      font-size: 16px;
+      letter-spacing: -1px;
+      line-height: 29px;
+    }
+  }
+}

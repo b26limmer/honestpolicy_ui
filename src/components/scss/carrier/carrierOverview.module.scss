@@ -1,0 +1,46 @@
+@import '../variables.module.scss';
+.carrierTemplateSectionTitle {
+  margin: 0;
+}
+.linesOfBusiness {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectionLink {
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
+}
+.buttonsContainer {
+  display: flex;
+}
+.carrierTemplateText {
+  margin-bottom: 0;
+}
+.lineIcon {
+  width: 50px;
+  margin-left: 2em;
+  margin-right: 0.5em;
+  object-fit: contain;
+  max-height: 40px;
+}
+@media (max-width: $md) {
+  .paperContainer {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .sectionLink {
+    margin: 2em 1em 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80px;
+  }
+  .lineIcon {
+    margin: 0 0 1em;
+  }
+  .linesOfBusiness {
+    flex-direction: column;
+  }
+}

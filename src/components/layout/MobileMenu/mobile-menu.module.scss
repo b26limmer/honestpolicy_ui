@@ -1,0 +1,68 @@
+@import '../../scss/variables.module.scss';
+
+.mobMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 20px;
+  width: 25px;
+  height: 40%;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: Montserrat, sans-serif;
+}
+
+.mobMenuActive {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $softGreen;
+  box-sizing: border-box;
+  padding: 20% 0;
+  transition: all 0.3s ease-in-out;
+  font-family: Montserrat, sans-serif;
+  .navLink,
+  .navLinkActive {
+    color: white;
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    text-decoration: none;
+  }
+  .navLinkActive {
+    text-decoration: underline;
+  }
+  .mobMenuClose {
+    color: white;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+.mobMenuHidden {
+  display: none;
+}
+
+@media (max-width: $md) {
+  .mobMenuActive {
+    display: flex;
+  }
+}
+
+@media (max-width: $sm) {
+  .mobMenuButton {
+    display: flex;
+  }
+}

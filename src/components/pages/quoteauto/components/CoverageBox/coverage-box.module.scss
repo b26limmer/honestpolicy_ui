@@ -1,0 +1,87 @@
+@import '../../../../scss/variables.module.scss';
+
+.coverageBox {
+  width: 217px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 4px;
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.coverageBoxBody {
+  margin: 16px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #e1eaf3;
+}
+
+.coverageBoxTitle {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #081c33;
+  font-weight: bold;
+}
+
+.coverageBoxIcon {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  background: #00ad84;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px auto;
+  svg {
+    font-size: 35px;
+    fill: white;
+  }
+}
+
+.coverageBoxDescription {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #081c33;
+  margin-bottom: 10px;
+}
+
+.coverageBoxBottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  padding-top: 0;
+  box-sizing: border-box;
+}
+
+.coverageBoxAction {
+  font-size: 30px;
+}
+.coverageBoxPrice {
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 23px;
+  text-align: center;
+}
+
+@media (max-width: $md) {
+  .coverageBox {
+    width: 100%;
+    min-width: 217px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: $sm) {
+  .coverageBox {
+    min-width: 100%;
+    margin-right: 0;
+  }
+}

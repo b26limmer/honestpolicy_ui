@@ -1,0 +1,52 @@
+@import '../../../../scss/variables.module.scss';
+.cardRoot {
+  border: 4px solid #ecf6f4 !important;
+  box-shadow: 4px 4px 20px 0 transparentize($color: #0cad84, $amount: 0.9) !important;
+}
+.cardHeaderTitle {
+  font-family: 'Montserrat' !important;
+  font-weight: 600 !important;
+}
+.switchTrack {
+  background-color: $newGreen !important;
+  opacity: 1 !important;
+}
+.switchCheckedColor {
+  color: #fff !important;
+}
+.settingsRow {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.settingsRowHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.settingsRowTitle {
+  @extend .fontOneMedium;
+  font-size: 18px;
+  color: $newGreen;
+}
+.settingsHelptext {
+  @extend .text;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+.lastHr {
+  margin-bottom: 2em !important;
+}
+.settingsButton {
+  padding: 5px 35px;
+  min-width: 130px;
+}
+.deleteButton {
+  @extend .settingsButton;
+  background-color: red;
+  border: 2px solid red;
+  &:hover {
+    color: red;
+  }
+}

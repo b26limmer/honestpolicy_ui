@@ -1,0 +1,258 @@
+@import '../../../../../scss/variables.module.scss';
+
+.walletPolicyRoot {
+  margin-bottom: 2rem;
+}
+
+.policyCollapse {
+  @extend .shadow;
+  @include borderContainer;
+  background-color: white;
+  margin-bottom: 1rem;
+}
+
+.policyCollapseHeader {
+  display: flex;
+  padding: 15px !important;
+}
+
+.policyCollapseItemName {
+  display: flex;
+  flex: 1;
+  svg {
+    font-size: 20px;
+    color: $softGrey;
+    align-self: center;
+    margin-right: 10px;
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 500;
+    span {
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.policyCollapseTitle {
+  display: flex;
+  flex: 1;
+  span {
+    font-size: 1.5rem;
+  }
+}
+
+.policyCollapseRightSide {
+  display: flex;
+}
+
+.policyCollapseItemPrice {
+  margin-right: 50px;
+  color: $darkGreen;
+  font-size: 1.2rem;
+}
+
+.policyCollapseTabs {
+  border-bottom: 1px solid #e8e8e8;
+  background-color: $softBackground;
+  .policyCollapseTab {
+    @extend .fontOneSemibold;
+    color: $color-black-1 !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: capitalize !important;
+
+    &:hover {
+      color: $blackTitle;
+    }
+
+    &:selected {
+      color: $blackTitle;
+      opacity: 1;
+    }
+
+    &:focus {
+      color: $blackTitle;
+      opacity: 1;
+    }
+  }
+}
+
+.policyCollapseIndicator {
+  background-color: $blackTitle !important;
+  height: 3px !important;
+}
+
+.policyPanelInfoLeft,
+.policyPanelInfoRight {
+  display: flex;
+  flex-direction: column !important;
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 500;
+    span {
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      svg {
+        color: $darkGreen;
+      }
+    }
+  }
+  hr {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.editPolicy {
+  @extend .fontOneSemibold;
+  text-decoration: underline;
+  color: $darkGreen;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  font-size: 1rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.getQuotes {
+  @extend .editPolicy;
+  justify-content: flex-start;
+}
+.policyPanelCoverageTab {
+  & > div {
+    padding: 0 !important;
+    padding-bottom: 1em !important;
+  }
+}
+.policyPanelPolicyTab {
+  & > div {
+    padding: 1em !important;
+  }
+}
+.policyPanelCoverageTabHeader {
+  padding: 10px 40px;
+  background-color: #dadedc;
+}
+
+.policyPanelCoverageInner {
+  padding: 20px 40px;
+  label {
+    display: flex;
+    justify-content: space-between;
+    svg {
+      color: $darkGreen;
+    }
+  }
+}
+
+.policyPanelPadding {
+  padding-left: 40px;
+}
+
+.policyPanelCoverageEdit {
+  padding: 0.5em 1em;
+}
+
+.policyCollapseSupportTitle {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+}
+
+.policyCollapseSupport {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.policyCollapseSupportIconWrapper {
+  width: 50px;
+  background-color: $softerGreen;
+  border-radius: 50%;
+  height: 50px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 20px;
+  }
+}
+
+.policyCollapseSupportNumber {
+  h4 {
+    @extend .fontOneSemibold;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 5px;
+
+    cursor: pointer;
+  }
+  p {
+    @extend .fontOneRegular;
+    font-size: 14px;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.policyText {
+  @extend .fontOneRegular;
+  font-size: 18px;
+  margin: 0;
+}
+.coverageDetailsAssetTitle {
+  @extend .fontOneSemibold;
+  font-size: 16px;
+  margin: 0;
+}
+.contactInfoLogoContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 30px 0;
+}
+.contactInfoLogo {
+  object-fit: contain;
+  width: 200px;
+  max-height: 100px;
+}
+.contactInfoGatsbyImg {
+  object-fit: contain;
+  width: 200px !important;
+  max-height: 100px !important;
+}
+
+@media (max-width: $sm) {
+  .policyCollapseTitle {
+    display: none;
+  }
+  .policyCollapseItemPrice {
+    margin-right: 5px;
+    font-size: 1rem;
+  }
+
+  .policyPanelCoverageInner {
+    padding: 10px !important;
+  }
+
+  .policyPanelCoverageInner {
+    padding: 20px;
+  }
+}

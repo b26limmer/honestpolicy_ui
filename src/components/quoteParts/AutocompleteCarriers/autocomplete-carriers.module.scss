@@ -1,0 +1,32 @@
+$red: #ff0000;
+$focus-border: #b8bbbe;
+
+.autoCompleteRoot {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  height: 48px !important;
+
+  input {
+    font-family: 'Montserrat' !important;
+  }
+
+  fieldset {
+    border: 1px solid #e2eaf3 !important;
+  }
+}
+
+.hasError {
+  fieldset {
+    border: 1px solid $red !important;
+  }
+}
+
+.inputFocused {
+  fieldset {
+    border-color: $focus-border !important;
+  }
+}
+
+.autocompleteOption {
+  font-family: 'Montserrat' !important;
+}

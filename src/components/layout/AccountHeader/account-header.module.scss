@@ -1,0 +1,267 @@
+@import '../../scss/variables.module.scss';
+
+.accountHeader {
+  width: 100%;
+  background-color: white;
+  height: 64px;
+  border-bottom: 1px solid #e2eaf3;
+}
+.breadcrumbLink {
+  @extend .fontOneRegular;
+  color: #081c33;
+}
+.accountHeaderInner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 24px;
+  padding-left: 280px;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+.accountHeaderRightSide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hamburgerMenu {
+  padding: 0 5px;
+  box-sizing: border-box;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 30px;
+  cursor: pointer;
+  height: 20px;
+  span {
+    width: 100%;
+    height: 0;
+    border: 1px solid $bgBlue;
+    border-radius: 30px;
+    background-color: $bgBlue;
+    position: relative;
+  }
+}
+.hamburgerMenuOpen {
+  span:nth-child(1) {
+    animation: openHamTop 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+  span:nth-child(2) {
+    animation: openHamMiddle 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+  span:nth-child(3) {
+    animation: openHamBottom 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+}
+.hamburgerMenuClose {
+  span:nth-child(1) {
+    animation: closeHamTop 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+  span:nth-child(2) {
+    animation: closeHamMiddle 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+  span:nth-child(3) {
+    animation: closeHamBottom 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+}
+@keyframes openHamTop {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 9px;
+    transform: rotateZ(0);
+  }
+  100% {
+    top: 9px;
+    transform: rotateZ(45deg);
+  }
+}
+@keyframes openHamMiddle {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes openHamBottom {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -9px;
+    transform: rotateZ(0);
+  }
+  100% {
+    top: -9px;
+    transform: rotateZ(-45deg);
+  }
+}
+@keyframes closeHamTop {
+  0% {
+    top: 9px;
+    transform: rotateZ(45deg);
+  }
+  50% {
+    top: 9px;
+    transform: rotateZ(0);
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes closeHamMiddle {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes closeHamBottom {
+  0% {
+    top: -9px;
+    transform: rotateZ(-45deg);
+  }
+  50% {
+    top: -9px;
+    transform: rotateZ(0);
+  }
+  100% {
+    top: 0;
+  }
+}
+.desktopMenu {
+  position: absolute;
+  z-index: 50;
+  top: 80px;
+  right: 20px;
+  animation: menuAppear 0.7s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+.cardContentRoot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 31px !important;
+}
+.desktopMenuTitle {
+  @extend .fontOneRegular;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.menuLink {
+  @extend .fontOneSemibold;
+  font-size: 18px;
+  width: 100%;
+  text-align: left;
+  color: $color-black-1;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  padding: 18px 119px 18px 0;
+  &:hover {
+    text-decoration: underline;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+}
+.infoIcon {
+  font-size: 36px;
+  color: $color-black-1;
+  margin-bottom: 4px;
+}
+.signOutButton {
+  box-sizing: border-box;
+  margin-top: 34px;
+  width: 263px;
+}
+.settingsLink {
+  @extend .fontOneRegular;
+  margin-top: 18px;
+  color: $newGreen;
+  &:hover {
+    font-weight: 500;
+  }
+}
+.desktopMenuIcon {
+  font-size: 24px;
+  color: $newGreen;
+  margin-right: 12px;
+}
+@keyframes menuAppear {
+  0% {
+    top: 80px;
+    right: -263px;
+  }
+  100% {
+    top: 80px;
+    right: 20px;
+  }
+}
+.accountHeaderLogo {
+  display: none;
+}
+.welcomeMessage {
+  @extend .fontOneSemibold;
+  margin-right: 35px;
+  color: $bgBlue;
+}
+
+@media (max-width: $md) {
+  .clickContainer {
+    display: none;
+  }
+  .accountHeaderLogo {
+    display: block;
+    img {
+      width: 190px;
+    }
+  }
+  .accountHeaderInner {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .welcomeMessage,
+  .desktopMenu {
+    display: none;
+  }
+  .breadcrumbs {
+    display: none;
+  }
+  .hamburgerMenu {
+    position: relative;
+    z-index: 1001;
+  }
+  .hamburgerMenuOpen {
+    span {
+      background-color: #fff;
+      border-color: #fff;
+    }
+  }
+}

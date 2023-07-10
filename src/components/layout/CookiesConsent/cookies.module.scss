@@ -1,0 +1,82 @@
+@import '../../scss/variables.module.scss';
+.cookiesConsentContainer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  height: fit-content;
+  padding: 1em;
+  background-color: $softBackground;
+  width: 100%;
+  box-sizing: border-box;
+}
+.hideBar {
+  display: none;
+}
+.text {
+  width: 75%;
+  color: $electricBlue;
+  a {
+    color: $electricBlue;
+  }
+}
+.buttonsContainer {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.declineBtn {
+  width: fit-content;
+  margin-right: 1em;
+}
+.acceptBtn {
+  width: fit-content;
+  margin-left: 1em;
+  background-color: $softGreen !important;
+  color: $softBackground !important;
+  &:hover {
+    background-color: $softBackground !important;
+    color: $softGreen !important;
+  }
+}
+.cookieConsentToolToggle {
+  @extend .text;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: fit-content;
+  text-decoration: underline;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+@media (max-width: $sm) {
+  .cookiesConsentContainer {
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between;
+    height: fit-content;
+  }
+  .text,
+  .buttonsContainer {
+    width: 100%;
+    margin: 0;
+  }
+  .buttonsContainer {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 1em;
+  }
+  .declineBtn,
+  .acceptBtn {
+    margin-bottom: 0; 
+  }
+  .cookieConsentToolToggle {
+    width: fit-content;
+    margin: 0;
+  }
+}

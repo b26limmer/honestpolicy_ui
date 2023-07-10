@@ -1,0 +1,51 @@
+@import '../general.module.scss';
+
+.inactiveInsuranceOption,
+.insuranceOption {
+  position: relative;
+  margin-bottom: 42px;
+  padding: 39px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.inactiveInsuranceOption {
+  background-color: transparent;
+  &:hover {
+    background-color: #fafafa;
+  }
+}
+.insuranceOption {
+  background-color: #fafafa;
+}
+.assetInfoContainer {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.addAnotherContainer {
+  margin-top: 20px;
+}
+.removeButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.removeOptionText {
+  @extend .fontOneSemibold;
+  color: #ad0000;
+  font-size: 18px;
+}
+@media #{$mx-small} {
+  .insuranceOption,
+  .inactiveInsuranceOption {
+    padding: 1em;
+  }
+  .removeButton {
+    svg {
+      margin: 0;
+    }
+  }
+  .removeOptionText {
+    display: none;
+  }
+}

@@ -1,0 +1,200 @@
+@import '../variables.module.scss';
+.heroContainer {
+  position: relative;
+  height: calc(100vh - 180px);
+}
+.zipForm {
+  display: flex;
+  width: fit-content;
+  justify-content: space-evenly;
+}
+.text {
+  font-size: 16px;
+}
+.customInputSelect {
+  position: relative;
+  cursor: pointer;
+  border: 2px solid $strongBlue;
+  background-color: $mobileCarrierBackground;
+  width: 260px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  padding: 15px;
+  &:hover {
+    background-color: transparentize($color: $softGreen, $amount: 0.7);
+    .selectedOption {
+      color: #fff;
+    }
+  }
+}
+.customInputSelectDisabled {
+  @extend .customInputSelect;
+  &:hover {
+    background-color: #fff;
+    .selectedOption {
+      color: $blackish;
+    }
+  }
+}
+.selectedOption {
+  @extend .fontOneSemibold;
+  color: $blackish;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 10px;
+  }
+}
+.showAvailableOptions {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #fff;
+  border: 2px solid $strongBlue;
+  border-radius: 5px;
+  padding: 0;
+  left: -2px;
+  top: -2px;
+  z-index: 1;
+}
+.availableOption {
+  @extend .selectedOption;
+  padding: 15px;
+  margin: 0;
+  &:hover {
+    background-color: $softGreen;
+    span {
+      color: #fff;
+    }
+  }
+}
+.hiddenOption {
+  display: none;
+}
+.icon {
+  max-height: 25px;
+  max-width: 25px;
+}
+.zipInputContainer {
+  display: flex;
+}
+.zipCodeInput {
+  @extend .customInputSelect;
+  @extend .fontOneRegular;
+  cursor: text;
+  width: 350px;
+  font-size: 20px;
+  color: $strongBlue;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+  &:hover {
+    background-color: #fff;
+  }
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &::placeholder {
+    color: $black;
+  }
+}
+.zipForm {
+  margin-bottom: 1em;
+  display: flex;
+}
+.submitButton {
+  @extend .fontOneRegular;
+  font-size: 20px;
+  background-color: $newGreen;
+  color: #fff;
+  border: 2px solid $newGreen;
+  border-radius: 0 5px 5px 0;
+  outline: none;
+  padding: 0 40px;
+  cursor: pointer;
+  &:hover {
+    background-color: #fff;
+    color: $newGreen;
+  }
+}
+.companyLogosContainer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  box-sizing: border-box;
+  justify-content: unset;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.companyLogoContainer {
+  height: 100px;
+  display: flex;
+  box-sizing: border-box;
+  min-width: calc(100% / 8);
+  padding: 0 35px;
+  filter: opacity(0.7);
+}
+@media #{$mx-medium} {
+  .zipForm {
+    flex-direction: column;
+  }
+  .customInputSelect {
+    border-radius: 5px 5px 0 0;
+    border-bottom: 0;
+    width: 100%;
+  }
+  .text {
+    text-align: center;
+  }
+  .showAvailableOptions {
+    width: calc(100% + 4px);
+  }
+  .zipCodeInput {
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    border-radius: 0 0 0 5px;
+  }
+  .zipCodeInput,
+  .submitButton {
+    font-size: 16px;
+  }
+  .availableOption {
+    display: flex;
+    justify-content: center;
+  }
+  .submitButton {
+    border-radius: 0 0 5px 0;
+    padding: 0 10px;
+    width: 200px;
+  }
+  .companyLogosContainer {
+    bottom: 10px;
+  }
+  .companyLogoContainer {
+    box-sizing: border-box;
+    scroll-snap-align: center;
+    min-width: calc(100% / 4);
+    padding: 0 35px;
+  }
+}
+@media #{$mx-small} {
+  .companyLogoContainer {
+    padding: 0 1em;
+    margin: 0;
+    min-width: calc(100% / 3);
+  }
+}

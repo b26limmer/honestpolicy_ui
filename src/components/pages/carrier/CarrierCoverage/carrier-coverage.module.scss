@@ -1,0 +1,275 @@
+@import '../../../scss/variables.module.scss';
+
+.carrierCoverage {
+  font-family: Montserrat, sans-serif;
+}
+.carrierCoverageTitle {
+  text-align: center;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  color: #000000;
+}
+.carrierCoverageDescription {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(#000000, 0.75);
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.carrierCoverageToggleWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.carrierCoverageToggle {
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: flex;
+  border: 2px solid #00ad84;
+  margin-bottom: 30px;
+}
+
+.carrierCoverageButton {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  margin: 2px;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.carrierCoverageButtonActive {
+  background: #00ad84;
+  border-radius: 4px;
+  color: white;
+}
+
+.carrierOne {
+  color: #fbd430;
+}
+.carrierTwo {
+  color: #3636d2;
+}
+.carrierThree {
+  color: #00ad84;
+}
+.carrierFour {
+  color: #d287fb;
+}
+.carrierFive {
+  color: #eca508;
+}
+
+.tableContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.carrierTemplateTitle {
+  text-align: center;
+}
+.selectCoverageOptionButton {
+  @extend .fontOneRegular;
+  font-size: 24px;
+  width: 170px;
+  margin: 0;
+  border-radius: 8px 8px 0 0;
+  background-color: transparent;
+  color: $softGreen;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.selectCoverageOptionButtonSelected {
+  @extend .selectCoverageOptionButton;
+  background-color: $softGreen;
+  color: #fff;
+}
+.optionsContainer {
+  border-radius: 0px 4px 4px 4px;
+  padding: 1em 0 0 0;
+  box-sizing: border-box;
+}
+
+.row {
+  padding-left: 16px !important;
+  box-sizing: border-box;
+}
+
+.rowGray {
+  box-sizing: border-box;
+  background: #f2f6fa;
+  border-radius: 2px;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+.tableH {
+  @extend .fontOneBold;
+  height: 34px;
+  color: #000;
+  font-size: 24px;
+  text-align: left;
+  color: $softGreen;
+  padding-bottom: 25px;
+  &:first-child {
+    width: calc(100% / 3);
+  }
+}
+.seeSomethingWrong {
+  @extend .fontOneRegular;
+  color: #acacac;
+  font-size: 18px;
+  text-align: right;
+}
+.letUsKnowLink {
+  @extend .seeSomethingWrong;
+  color: #acacac;
+  border: none;
+  margin: 0;
+  background-color: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.diffContainer {
+  color: #4f4f4f;
+  font-family: 'Montserrat';
+  line-height: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.diffText {
+  margin-right: 10px;
+  line-height: 36px;
+}
+.optionTitle {
+  @extend .fontOneSemibold;
+  color: #000;
+  font-size: 24px;
+  letter-spacing: -1px;
+  line-height: 29px;
+  margin-top: 1em;
+  font-size: 20px;
+  padding-left: 16px;
+  padding-right: 6px;
+}
+.optionDescription {
+  @extend .text;
+  font-size: 16px;
+  margin-top: 1em;
+}
+.optionHeaderRow {
+  padding: 1em;
+  padding-bottom: 1.5em;
+}
+.optionsRow {
+  padding: 1em;
+
+  &:nth-child(even) {
+    background-color: #ececec;
+  }
+}
+.optionsIconContainer,
+.optionsIconCell {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.optionsIcon {
+  font-size: 3.1875rem !important;
+}
+.optionsNameContainer {
+  font-family: 'Montserrat';
+  font-size: 24px;
+  line-height: 3.1875rem;
+  font-weight: 500;
+}
+
+.isDiff {
+  background-color: #b6e8c7 !important;
+}
+.seeMoreButton {
+  @extend .reusableButton;
+  width: 200px;
+  height: 30px;
+  margin: 2em 0;
+  align-self: center;
+}
+@media (max-width: $sm) {
+  .optionsIconCell {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: $md) {
+  .selectCoverageOptionButton,
+  .selectCoverageOptionButtonSelected {
+    display: none;
+  }
+  .carrierTemplateTitle {
+    line-height: 1em;
+  }
+  .paperContainer {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .optionsContainer {
+    border: none;
+  }
+
+  .coverageButtonsContainers {
+    display: none;
+  }
+  .row {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    th {
+      width: 100%;
+    }
+    h5 {
+      font-size: 16px;
+      margin: 1em 0 0;
+    }
+    p {
+      font-size: 14px;
+      margin-top: 0;
+      text-align: justify;
+    }
+  }
+
+  .tableH {
+    display: none;
+  }
+
+  .optionTitle {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: $sm) {
+  .carrierCoverageSeeMoreWrapper {
+    margin-top: 10px;
+  }
+}
+
+.carrierCoverageSeeMoreWrapper {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,22 @@
+@import '../scss/variables.module.scss';
+
+.loadingContainer {
+  align-items: center;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  padding: 120px 1em;
+  width: 100%;
+}
+
+.lottiePlayer {
+  width: 220px;
+}
+
+.loadingTitle {
+  @extend .fontOneSemibold;
+  font-size: 24px;
+  text-align: center;
+}

@@ -1,0 +1,154 @@
+@import '../../../../../scss/variables.module.scss';
+.profileCarrierCardRoot {
+  @extend .shadow;
+  @include borderContainer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  &:hover {
+    box-shadow: 0 14px 28px rgba(44, 163, 59, 0.32), 0 10px 10px rgba(246, 248, 246, 0.51) !important;
+  }
+}
+.accountProfileCardTitle {
+  font-family: 'Montserrat' !important;
+  font-weight: 600 !important;
+  font-size: 24px !important;
+}
+.walletIcon{
+  font-size: 30px;
+  color: $newGreen;
+}
+.walletCard {
+  height: 100%;
+  min-height: 100%;
+}
+.accountProfileCardSubTitle {
+  font-family: 'Montserrat' !important;
+  color: #000;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+.profileViewInsuranceBlock {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  button {
+    min-width: 260px;
+  }
+}
+.profileQuotesCardRoot {
+  @extend .shadow;
+  @include borderContainer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  &:hover {
+    box-shadow: 0 14px 28px rgba(44, 163, 59, 0.32), 0 10px 10px rgba(246, 248, 246, 0.51) !important;
+  }
+}
+.profileQuotesDollarIcon {
+  color: $newGreen;
+  font-size: 30px;
+}
+.profileQuotesTypeName {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  margin-top: 10px;
+  cursor: pointer;
+  svg {
+    margin-left: 10px;
+    &:nth-child(2) {
+      color: $blackTitle;
+    }
+  }
+  p {
+    margin-top: 0px;
+    font-size: 0.8rem;
+    color: #000;
+  }
+  &:hover {
+    background-color: #0000000a;
+  }
+}
+.profileCarrierLookup {
+  margin-top: 2rem;
+}
+.profileSearchTitleIcon {
+  font-size: 30px;
+  color: $newGreen;
+}
+.accountProfileSearchInput {
+  display: flex;
+  width: 100%;
+  button {
+    flex: 1;
+    padding: 10px 30px;
+    height: 48px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+.profileQuotesContent {
+  padding-top: 0px !important;
+}
+.walletCardContent {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.getQuoteLinkButton {
+  @include borderContainer;
+  @extend .fontOneSemibold;
+  padding: 15px;
+  margin: 1em 0 0;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  text-align: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: $newGreen;
+  font-size: 30px;
+  span {
+    color: #000;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  &:hover {
+    box-shadow: 0px 0px 5px 2px transparentize($color: $newGreen, $amount: 0.6);
+  }
+}
+.quoteLinkContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  color: $newGreen;
+}
+.quoteLinkTitle {
+  @extend .fontOneSemibold;
+  display: flex;
+  cursor: pointer;
+  color: $newGreen;
+  text-decoration: underline;
+}
+.dashboardZipCodeInput {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+@media #{$mx-small} {
+  .accountProfileCardSubTitle {
+    font-size: 12px !important;
+  }
+}

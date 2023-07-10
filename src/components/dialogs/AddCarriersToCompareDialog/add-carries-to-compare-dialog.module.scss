@@ -1,0 +1,157 @@
+@import '../../scss/variables.module.scss';
+
+.compareDialog {
+  max-width: 600px;
+  width: 100%;
+}
+
+.compareDialogTitle {
+  h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+  }
+}
+.lineSelectorContainer {
+  width: 100%;
+  height: 30px;
+  border: 1px solid $bgBlue;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+  margin-bottom: 44px;
+}
+.lineButton {
+  @extend .fontOneSemibold;
+  box-sizing: border-box;
+  font-size: 14px;
+  width: calc(50% + 2px);
+  background-color: transparent;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  padding: 0;
+  height: 30px;
+  margin: 0 -1px;
+}
+.lineButtonSelected {
+  @extend .lineButton;
+  background-color: $darkGreen;
+  color: #fff;
+}
+.compareDialogTag {
+  border-radius: 100px;
+  background-color: rgba(#00ad84, 0.16);
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-family: Montserrat, sans-serif;
+  color: $softGreen;
+  border: 1px solid $softGreen;
+  font-weight: 600;
+  margin: 10px;
+  margin-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-right: 40px;
+  // margin-bottom: 10px !important;
+  max-width: 50%;
+  margin: 5px !important;
+}
+
+.compareDialogRow {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.compareDialogTagClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  svg {
+    font-size: 16px;
+  }
+}
+
+.compareDialogCarrier {
+  display: flex;
+  align-items: center;
+  height: 88px;
+  border-top: 1px solid #e1eaf3;
+  border-bottom: 1px solid #e1eaf3;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: whitesmoke;
+  }
+  img {
+    margin-right: 10px;
+    object-fit: contain;
+    object-position: left center;
+  }
+}
+
+.compareDialogCarrierImage {
+  height: 100%;
+  padding: 18px 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.compareDialogGatsbyImageWrapper {
+  max-height: 60px;
+  max-width: 150px;
+  object-fit: contain;
+}
+.compareDialogTitle {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.compareDialogInput {
+  background-color: #ebeff3 !important;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  width: 100%;
+}
+
+@media (max-width: $md) {
+  .compareDialogTag {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: $sm) {
+  .compareDialogCarrierImage {
+    display: none;
+  }
+  .compareDialogButtons {
+    display: flex;
+    justify-content: space-between;
+    > button {
+      flex: 1;
+    }
+  }
+  .compareDialog {
+    margin: 5px !important;
+  }
+}

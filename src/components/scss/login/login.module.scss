@@ -1,0 +1,132 @@
+@import '../variables.module.scss';
+
+.login {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.loginInner {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(180deg, rgba(61, 61, 85, 0.29), rgba(#3d3d55, 0.73)),
+    url('../../../images/family-kitchen.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.loginTitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 66px;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin-top: 0;
+}
+
+.loginBox {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.loginBoxWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 20px;
+  padding: 0;
+}
+
+.loginBoxTitle {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.loginInputs {
+  padding: 40px 0;
+  > div {
+    margin: 22px 0;
+  }
+}
+
+.loginButton {
+  button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    height: 50px;
+  }
+}
+
+.keepLoggedIn {
+  margin-bottom: 10px;
+  margin-top: 5px;
+  a {
+    color: $softGreen;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: rgba($softGreen, 0.3);
+    }
+  }
+}
+
+.dashboardLayoutRoot {
+  margin: 0;
+}
+
+.dashboardLayoutInner {
+  padding: 0;
+}
+
+@media (max-width: $lg) {
+  .loginTitle {
+    font-size: 55px;
+    line-height: 66px;
+  }
+}
+
+@media (max-width: $md) {
+  .loginTitle,
+  .loginBox {
+    position: static;
+    transform: none;
+  }
+  .loginBoxWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .loginBox {
+    width: 100%;
+  }
+  .loginTitle {
+    margin-top: 30px;
+  }
+  .login {
+    height: 100%;
+  }
+  .loginInner {
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: $sm) {
+  .loginTitle {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}

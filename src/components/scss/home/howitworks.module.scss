@@ -1,0 +1,57 @@
+@import '../variables.module.scss';
+.container {
+  box-sizing: border-box;
+  padding: 20px 0;
+  flex-direction: column;
+}
+.textContainer {
+  @extend .container;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+.greySubtitle {
+  @extend .subtitle;
+  color: #5a5c5d;
+  position: relative;
+  padding: 10px 0 0;
+}
+.greySubtitle:before {
+  content: '';
+  position: absolute;
+  left: calc(50% - 25px);
+  top: 0;
+  height: 0;
+  width: 50px;
+  border: 2px solid $softGreen;
+}
+.greyText {
+  @extend .text;
+  color: $softGrey;
+}
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  margin: 20px 0;
+}
+@media only screen and (max-width: $xl) {
+  .icons {
+    justify-content: space-around;
+    width: 90%;
+  }
+}
+@media only screen and (max-width: $lg) {
+  .textContainer {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: $md) {
+  .icons {
+    flex-direction: column;
+    margin: 20px 0 0;
+  }
+}

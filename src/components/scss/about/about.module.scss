@@ -1,0 +1,158 @@
+@import '../variables.module.scss';
+.link {
+  @extend .text;
+  font-size: 14px;
+  margin-top: 12px;
+  text-decoration: none;
+  text-align: center;
+  color: $newGreen;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.requestInfoButton {
+  @extend .fontOneRegular;
+  padding: 14px 70px;
+  font-size: 22px;
+}
+.columnContainer {
+  box-sizing: border-box;
+  padding: 70px 260px;
+  position: relative;
+}
+.whyUseHp {
+  @extend .columnContainer;
+  background: linear-gradient(180deg, #fff 0%, #fff 75%, #f1f9f5 100%);
+}
+.sectionTitle {
+  @extend .title;
+  width: 100%;
+  text-align: left;
+}
+.textContainer {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  padding-left: 1em;
+}
+.sectionSubtitle {
+  @extend .sectionTitle;
+  font-size: 38px;
+}
+.text {
+  font-size: 18px;
+}
+.featuresContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+}
+.featureRow {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.odd {
+  flex-direction: row;
+  .textContainer {
+    padding-left: 0;
+    padding-right: 1em;
+  }
+}
+.featureImgWrapper {
+  min-width: 50% !important;
+}
+.readyToStartContainer {
+  @extend .columnContainer;
+  padding-top: 0;
+  padding-bottom: 192px;
+  text-align: center;
+  .sectionTitle {
+    width: fit-content;
+    font-size: 38px;
+  }
+}
+.ctaContainer {
+  background-color: $bgBlue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+  margin-top: 0;
+  position: relative;
+  top: -76px;
+  height: 152px;
+  box-sizing: border-box;
+}
+.ctaTitle,
+.ctaText {
+  @extend .text;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+.ctaTitle {
+  font-size: 28px;
+  font-weight: 600;
+  a {
+    color: #fff;
+  }
+}
+.ctaText {
+  font-size: 18px;
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.readyText {
+  @extend .text;
+  margin-bottom: 50px;
+}
+@media #{$mx-medium} {
+  .heroContainer {
+    padding-bottom: 0;
+  }
+  .columnContainer {
+    padding: 1em;
+  }
+  .featureRow,
+  .row {
+    flex-direction: column;
+    .textContainer {
+      padding: 0;
+    }
+    margin-bottom: 50px;
+  }
+
+  .featureImg {
+    width: 100%;
+  }
+  .text {
+    font-size: 16px;
+  }
+  .sectionTitle {
+    font-size: 36px;
+  }
+  .readyToStartContainer {
+    padding-bottom: 100px;
+    .sectionTitle {
+      font-size: 30px;
+    }
+  }
+  .ctaContainer {
+    padding: 0 1em;
+  }
+  .ctaText {
+    font-size: 14px;
+  }
+  .sectionSubtitle {
+    font-size: 28px;
+  }
+}

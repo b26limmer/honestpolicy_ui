@@ -1,0 +1,30 @@
+@import '../../scss/variables.module.scss';
+.addAnotherContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid $borderGrey;
+  border-left: 0;
+  border-right: 0;
+  &:hover {
+    @extend.shadow;
+  }
+}
+.addOptionButton {
+  @extend .fontOneSemibold;
+  width: fit-content;
+  color: $newGreen;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  padding: 21px;
+  width: 100%;
+  &:hover {
+    background-color: $borderGrey;
+  }
+}
+.plusIcon {
+  font-size: 20px;
+  margin-right: 16px;
+}

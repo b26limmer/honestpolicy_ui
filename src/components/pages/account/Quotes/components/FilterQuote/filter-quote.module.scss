@@ -1,0 +1,29 @@
+@import '../../../../../scss/variables.module.scss';
+
+.filterDialogTitle {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.filterExpandLink {
+  display: flex;
+  color: $darkGreen;
+  text-decoration: underline;
+  margin: 10px;
+  font-size: 14px;
+}
+
+.dialogBottom {
+  display: flex;
+  margin-top: 1.5rem;
+  padding-left: 10px;
+  justify-content: space-between;
+  span {
+    flex: 1;
+    text-decoration: underline;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import '../scss/variables.module.scss';
+
+.button {
+  @extend .fontOneMedium;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid $softGreen;
+  background-color: #fff;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  color: $softGreen;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    background-color: $softGreen;
+    color: #fff;
+  }
+}

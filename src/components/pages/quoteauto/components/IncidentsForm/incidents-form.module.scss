@@ -1,0 +1,285 @@
+@import '../../quote-auto.module.scss';
+.addAnother {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #3070aa;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.incidentTitle {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.checkboxGroup {
+  display: flex;
+  justify-content: space-between;
+  span {
+    font-family: 'Montserrat' !important;
+    font-size: 14px !important;
+  }
+}
+.InputSmall {
+  height: 50px;
+  width: 48%;
+  background-color: white;
+  border: 1px solid gray;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+.addAnother {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #3070aa;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.addAnotherBlockHidden {
+  display: none;
+}
+
+.Historytext {
+  padding-top: 2rem;
+  width: 1, 440px;
+  height: auto;
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #ffffff 0%,
+    #f1f9f3 50%,
+    #ffffff 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #ffffff 0%,
+    #f1f9f3 50%,
+    #ffffff 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #f1f9f3 50%,
+    #ffffff 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.Historyicon {
+  text-align: center;
+  font-size: 24px;
+  padding-top: 20px;
+}
+
+.formLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.formTitle {
+  font-family: Montserrat;
+  color: $colorBlack3;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.questionText {
+  color: $color-black-1;
+  font-weight: Regular 400;
+  font-size: 18px;
+  line-height: 110 (6.111);
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.Historyinputbox {
+  height: 50px;
+  width: 332px;
+  background-color: white;
+  border: 2px solid $colorGray3;
+  border-radius: 2px;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+  margin-bottom: 11px;
+}
+.hasIncidentError {
+  border-color: red !important;
+}
+.bottomLayout {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  background-color: white;
+  text-align: center;
+}
+
+.btnBack {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-left: 3rem;
+  margin-top: 2.6rem;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btnContinue {
+  margin: 2rem auto;
+  padding: 0.5rem 6rem;
+  padding-top: 0.6rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
+  background-color: $darkGreen;
+  border-radius: 4px;
+  box-shadow: 0 0.4rem 1.5rem rgba($darkGreen, 0.6);
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0.4rem 1.5rem rgba($darkGreen, 0.3);
+  }
+}
+
+.formBlockLayout {
+  font-family: Montserrat;
+  color: $colorBlack2;
+}
+
+.inputTitle {
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: $softGrey;
+}
+
+.inputElement {
+  border-radius: 1px;
+}
+
+textarea.reviewTextArea {
+  width: 100%;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid transparentize($color: $softGrey, $amount: 0.7);
+  resize: none;
+  text-indent: 10px;
+  font-family: 'Montserrat';
+
+  @media (max-width: $md) {
+    margin-top: 8px;
+    width: calc(100% - 14px);
+  }
+}
+
+.additionalBlock {
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  color: $darkGreen;
+  margin: 0 auto;
+  margin-top: 1.2rem;
+  margin-bottom: 1.5rem;
+  border-top: 2px solid $colorGray3;
+  border-bottom: 2px solid $colorGray3;
+  padding-top: 1.1rem;
+  padding-bottom: 0.8rem;
+  @media (max-width: $md) {
+    max-width: calc(100% - 150px);
+  }
+  @media (max-width: $sm) {
+    max-width: calc(100% - 2em);
+  }
+
+  a {
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.agreementBlock {
+  max-width: 700px;
+  margin: 0 auto;
+  color: $colorBlack2;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  @media (max-width: $md) {
+    max-width: calc(100% - 150px);
+  }
+  @media (max-width: $sm) {
+    max-width: calc(100% - 80px);
+  }
+
+  .agreementBox {
+    display: flex;
+    flex-direction: row;
+
+    .checkBox {
+      display: block;
+      width: 50px;
+      height: 50px;
+    }
+
+    .agreementText {
+      display: block;
+    }
+  }
+
+  .reminder {
+    display: block;
+    margin-left: 50px;
+    margin-top: 2rem;
+
+    span {
+      font-weight: bold;
+    }
+
+    .linkGreen {
+      color: $darkGreen;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .reminText {
+    display: block;
+    margin-top: 1.5rem;
+    margin-left: 50px;
+    font-weight: bold;
+  }
+}

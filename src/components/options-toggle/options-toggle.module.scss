@@ -1,0 +1,32 @@
+@import '../scss/variables.module.scss';
+.carrierCoverageToggleWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.carrierCoverageToggle {
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: flex;
+  border: 2px solid #00ad84;
+  margin-bottom: 30px;
+}
+
+.carrierCoverageButton {
+  @extend .fontOneBold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  margin: 2px;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.carrierCoverageButtonActive {
+  background: #00ad84;
+  border-radius: 4px;
+  color: white;
+}

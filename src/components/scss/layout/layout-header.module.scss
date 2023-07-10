@@ -1,0 +1,49 @@
+@import '../../scss/variables.module.scss';
+
+.layoutHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 15px;
+  padding-top: 18px;
+  background: radial-gradient(100px 100px at top center, #ffffff 0%, #f1f9f5 100%);
+  font-family: 'Montserrat';
+  box-sizing: border-box;
+  .logo {
+    width: 180px;
+    height: 30px;
+  }
+}
+.formlink {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  color: $color-black-1;
+  font-size: 0.95rem;
+  font-size: 18px;
+  a,
+  button {
+    color: $darkGreen;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+@media #{$mx-small} {
+  .formlink {
+    a,
+    button {
+      font-weight: 600;
+    }
+    span {
+      display: none;
+    }
+  }
+}

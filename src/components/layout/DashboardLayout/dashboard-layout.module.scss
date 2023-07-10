@@ -1,0 +1,128 @@
+@import '../../scss/variables.module.scss';
+
+.dashboardLayout {
+  padding-left: 258px;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 2rem;
+}
+.dashboardLayoutTitleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  margin-top: 50px;
+  padding: 0 50px;
+}
+.dashboardLayoutSubTitleText {
+  font-family: 'Montserrat';
+}
+.dashboardLayoutInner {
+  margin-top: 24px;
+  padding: 40px;
+  padding-top: 20px;
+  background-color: #fffffff2;
+}
+.dashboardLayoutTitle {
+  font-style: normal;
+  font-size: 32px;
+  line-height: 37px;
+  color: $electricBlue;
+  margin-bottom: 4px !important;
+  margin-top: 0;
+  font-weight: 500 !important;
+}
+.dashboardLayoutSubTitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0;
+  color: $softGreen;
+  display: flex;
+  &:hover {
+    cursor: pointer;
+  }
+  > span {
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+  }
+}
+
+.helpTextContainer {
+  @include borderContainer;
+  p {
+    @extend .text;
+    margin: 0;
+  }
+  padding: 1em;
+  position: absolute;
+  width: 360px;
+  right: calc(50% - 280px);
+  top: calc(50% - calc(var(--helpTextHeight) / 2));
+  z-index: 5000;
+  background-color: #fff;
+}
+
+.dashboardLayoutHeaderRightside {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    width: 250px;
+    margin: 10px 0;
+  }
+}
+
+.dashboardLayoutPaddingless {
+  padding: 0 !important;
+  .dashboardLayoutInner {
+    margin: 0;
+  }
+}
+
+@media (max-width: $md) {
+  .dashboardLayout {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+  .dashboardLayoutTitle {
+    margin-bottom: 10px !important;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .dashboardLayoutSubTitle {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .dashboardLayoutTitleHeader {
+    position: relative;
+    flex-direction: column;
+    > div {
+      &:last-child {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .dashboardLayoutTitleHeader {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .dashboardLayoutHeaderRightside {
+    justify-content: flex-start;
+    margin-top: 20px;
+    & > div {
+      width: 100%;
+    }
+  }
+
+  .dashboardLayoutInner {
+    padding: 20px;
+  }
+}

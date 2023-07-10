@@ -1,0 +1,152 @@
+@import '../../../../../scss/variables.module.scss';
+
+.comment {
+  font-family: Montserrat, sans-serif;
+}
+
+.commentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.commentUser {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.commentRate {
+  display: flex;
+  align-items: center;
+}
+.commentRateImage {
+  margin-right: 10px;
+}
+
+.commentRateScore {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: right;
+  color: #4eaa87;
+}
+
+.commentBody {
+}
+
+.commentDescription {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: rba(#000000, 0.75);
+}
+
+.commentTags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.commentBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.commentTag {
+  margin-right: 20px;
+  background: #f1f5f9;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  padding: 10px 15px;
+  span {
+    font-weight: 500;
+  }
+}
+
+.commentReview {
+  display: flex;
+}
+
+.commentReviewText {
+  margin-right: 10px;
+}
+
+.commentReviewButtons {
+  margin-left: 1em;
+  display: flex;
+  align-items: center;
+  button {
+    box-shadow: none;
+    margin-right: 1em;
+    padding: 4px 7px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    font-weight: 500;
+    background-color: transparent;
+    color: $newGreen;
+    &.buttonActive {
+      color: #fff;
+      background-color: $newGreen;
+    }
+  }
+}
+
+.commentDescription {
+  position: relative;
+  span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    color: #404040;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      color: $softGreen;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      height: 30px;
+      width: 50px;
+      top: 0;
+      left: -50px;
+      background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+}
+
+.commentDescriptionMore {
+  span {
+    bottom: -20px;
+  }
+}
+
+p.commentReviewScore {
+  opacity: 0.6;
+  font-size: 0.8rem;
+  align-self: center;
+}
+
+@media (max-width: $md) {
+}
+
+@media (max-width: $sm) {
+  .commentReview {
+    flex-direction: column;
+  }
+  .commentTag {
+    margin-bottom: 5px;
+  }
+  .commentReviewText {
+    margin-bottom: 3px;
+  }
+}

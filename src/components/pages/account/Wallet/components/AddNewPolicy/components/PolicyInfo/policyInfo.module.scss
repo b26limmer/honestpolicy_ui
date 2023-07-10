@@ -1,0 +1,33 @@
+@import '../general.module.scss';
+.selectCarrier {
+  width: 330px;
+}
+.addAnotherContainer {
+  margin: 20px 0 10px;
+}
+.removeOtherPeopleButton {
+  position: absolute;
+  right: -5px;
+  top: 0;
+}
+.itemTitle {
+  display: flex;
+  align-items: center;
+}
+.multipleInputContainer {
+  position: relative;
+}
+.dateLabel {
+  @extend .fontOneSemibold;
+  display: none;
+  margin-bottom: -10px;
+  margin-top: 5px;
+}
+@media #{$mx-small} {
+  .selectCarrier {
+    width: 100%;
+  }
+  .dateLabel {
+    display: block;
+  }
+}

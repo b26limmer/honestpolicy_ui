@@ -1,0 +1,100 @@
+@import '../../scss/variables.module.scss';
+
+$green-help: #006349;
+$transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+.expandedButton {
+  @extend .fontOneSemibold;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid $green-help;
+  border-radius: 4px;
+  color: $green-help;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  padding: 10px 14px;
+  position: fixed;
+  right: 20px;
+  top: 26px;
+  transition: background-color $transition;
+  transition: color $transition;
+
+  &:hover {
+    background-color: $green-help;
+    color: $white;
+
+    .icon {
+      color: $white;
+    }
+  }
+}
+
+.shrinkedButton {
+  @extend .expandedButton;
+  animation: showShrinked $transition;
+  backdrop-filter: blur(2px);
+  border-radius: 100%;
+  height: 50px;
+  transition: border-radius $transition;
+  width: 50px;
+
+  .icon {
+    margin-right: 0;
+  }
+
+  span {
+    display: none;
+  }
+}
+
+.icon {
+  color: $green-help;
+  font-size: 24px;
+  margin-right: 16px;
+}
+
+@keyframes showShrinked {
+  from {
+    background-color: $green-help;
+    height: 70px;
+    width: 70px;
+  }
+
+  to {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media #{$mx-medium} {
+  .expandedButton {
+    font-size: 16px;
+    padding: 6px 9px;
+
+    .icon {
+      font-size: 18px;
+    }
+  }
+}
+
+@media #{$mx-small} {
+  .expandedButton {
+    font-size: 14px;
+    padding: 4px 6px;
+    top: 108px;
+
+    .icon {
+      font-size: 18px;
+    }
+  }
+
+  .shrinkedButton {
+    bottom: 50px;
+    height: 50px;
+    top: unset;
+    width: 50px;
+    z-index: 5000;
+  }
+}

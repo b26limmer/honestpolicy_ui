@@ -1,0 +1,34 @@
+@import '../../../../../../../scss/variables.module.scss';
+.formFooterContainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  margin: 1em 0;
+}
+.returnButton,
+.submitButton {
+  place-self: center;
+}
+
+.returnButton {
+  @extend .fontOneSemibold;
+  font-size: 18px;
+  color: $color-black-1;
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+@media #{$mx-small} {
+  .formFooterContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .returnButton {
+    margin-bottom: 10px;
+  }
+  .submitButton {
+    margin-bottom: 25px;
+    width: 260px;
+  }
+}

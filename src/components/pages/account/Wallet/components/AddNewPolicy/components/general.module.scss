@@ -1,0 +1,149 @@
+@import '../../../../../../scss/variables.module.scss';
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.initialContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 500px;
+  width: 100%;
+  background: linear-gradient(180deg, #fff 0%, #f1f9f3 100%);
+}
+.formTitle {
+  @extend .text;
+  font-size: 24px;
+  margin: 0;
+  color: $color-black-1;
+  text-align: center;
+}
+.questionTitle {
+  @extend .fontOneRegular;
+  font-size: 18px;
+  margin: 55px 0 25px;
+  position: relative;
+}
+.tooltip {
+  margin-top: 0 !important;
+  display: inline-block !important;
+  position: absolute !important;
+  top: 0.3em;
+  right: -1em;
+  span {
+    @extend .text;
+    margin: 0;
+    min-width: 250px;
+  }
+}
+.formSection {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 1em;
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+}
+.formSectionTitle {
+  @extend .fontOneSemibold;
+  text-align: left;
+  font-size: 18px;
+  color: $color-black-1;
+  position: relative;
+  padding-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 27px;
+  &::after {
+    content: '';
+    height: 2px;
+    background-color: #dbdbdb;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.formInputsAddressInner {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  & > div {
+    &:nth-child(2) {
+      margin: 10px;
+    }
+  }
+}
+.itemTitle {
+  @extend .fontOneRegular;
+  font-size: 14px;
+  color: $color-black-1;
+  margin-top: 10px;
+}
+.multipleInputContainer {
+  display: flex;
+  gap: 26px;
+  * {
+    flex: 1;
+  }
+}
+.infoText {
+  margin: 0 0 0 5px !important;
+}
+.formTopIcon {
+  font-size: 36px;
+  margin: 55px 0 12px;
+}
+.insideCheckTextInput {
+  max-width: 50%;
+  margin-bottom: 0;
+  padding: 1em;
+  padding-right: 0;
+}
+.optionsContainer {
+  width: 332px;
+}
+.questionBlock {
+  margin: 0;
+}
+@media #{$mx-small} {
+  .optionsContainer {
+    width: 100%;
+  }
+  .formInputsAddressInner {
+    flex-direction: column;
+    margin-top: 0;
+    & > div {
+      &:nth-child(2) {
+        margin: 10px 0;
+      }
+    }
+  }
+  .initialContainer {
+    padding: 0 1em;
+  }
+  .formSection {
+    padding: 1em;
+  }
+  .formSectionTitle {
+    padding-bottom: 10px;
+    margin-bottom: 1em;
+  }
+  .formTopIcon {
+    margin: 26px 0 12px;
+  }
+  .multipleInputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: unset;
+  }
+  .questionTitle {
+    margin: 20px 0 25px;
+  }
+}

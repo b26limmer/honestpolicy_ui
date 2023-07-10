@@ -1,0 +1,267 @@
+@import '../variables.module.scss';
+
+.compare {
+  font-family: Montserrat, sans-serif;
+  padding-top: 60px;
+}
+
+.compareMain {
+  background-color: $carrierBackground;
+  padding-top: 250px;
+}
+
+.carrierTemplateTitle {
+  text-align: center;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  margin-top: 80px;
+}
+.carrierTemplateSubtitle {
+  @extend .carrierTemplateTitle;
+  font-size: 24px;
+}
+
+.carrierDiscountsTitle {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  color: #000000;
+  margin-top: 80px;
+  margin-bottom: 45px;
+}
+
+.carriersSection {
+  @extend .columnContainer;
+  justify-content: flex-start;
+}
+.carrierTemplateSectionTitle {
+  text-align: left;
+  margin: 0;
+  width: 20%;
+}
+.topContainer {
+  @extend .container;
+  justify-content: space-around;
+}
+.carrierContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+}
+.carrierLogo {
+  width: 195px;
+  object-fit: contain;
+  max-height: 73px;
+}
+.miniShield {
+  background-image: url('../../../images/carrierTemplate/minishield.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90px;
+  width: 130px;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0;
+  box-sizing: border-box;
+  margin: auto;
+}
+.smartScore {
+  @extend .fontOneSemibold;
+  text-align: center;
+  margin: 0;
+  height: 37px;
+  width: 74.24px;
+  color: #fff;
+  font-size: 36px;
+  letter-spacing: -1.5px;
+  line-height: 25px;
+  text-align: center;
+  .smartScoreBase {
+    font-size: 20px;
+  }
+}
+.smartScoreTitle {
+  @extend .carrierTemplateSubtitle;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.carrierLogoContainer {
+  width: 20%;
+}
+.shieldsContainer {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.carrierCta {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 180px;
+  min-height: fit-content;
+}
+.carrierNameAndButton {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    margin-bottom: 1em;
+  }
+}
+.carrierName {
+  @extend .carrierTemplateSubtitle;
+  margin-top: 0;
+}
+.compareCtaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 57px;
+}
+.reusableButton {
+  width: 100%;
+}
+.compareButton {
+  @extend .reusableButton;
+  width: unset;
+  height: 100%;
+}
+.carrierLogoMain {
+  width: 280px;
+  object-fit: contain;
+}
+.carrierLogoDesktop {
+  @extend .carrierLogo;
+}
+.isMobile {
+  display: none;
+}
+@media (max-width: $lg) {
+  .carrierLogoContainer {
+    width: 15%;
+  }
+  .shieldsContainer {
+    width: 70%;
+  }
+  .carrierCta {
+    width: 15%;
+  }
+  .carrierName {
+    font-size: 20px;
+    max-width: 100%;
+    word-break: break-all;
+  }
+  .carrierLogo {
+    width: 120px;
+  }
+  .shieldsContainer {
+    padding: 0 2em;
+  }
+  .miniShieldContainer,
+  .shieldContainer {
+    width: calc(100% / 4);
+  }
+  .miniShield {
+    width: 60px;
+    padding: 0;
+    align-items: center;
+  }
+  .smartScore {
+    font-size: 28px;
+  }
+  .smartScoreBase {
+    display: none;
+  }
+  .smartScoreTitle {
+    font-size: 16px;
+  }
+}
+@media (max-width: $md) {
+  .miniShieldContainerDesktop,
+  .isDesktop,
+  .carrierLogoDesktop {
+    display: none;
+  }
+  .isMobile {
+    display: block;
+  }
+  .heroPaper {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+  .topContainer {
+    flex-direction: column;
+  }
+  .carrierLogoMain {
+    width: 100%;
+    max-width: 300px;
+    object-fit: contain;
+  }
+  .carrierContainer {
+    flex-direction: column-reverse;
+    margin: 0 0 2em;
+  }
+  .shieldsContainer {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .shieldContainer {
+    width: calc(100% / 3);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+  }
+  .smartScoreTitle {
+    margin: 0;
+  }
+  .miniShield {
+    width: 100%;
+    margin: 0;
+  }
+  .carrierCta {
+    flex-direction: row;
+    width: 100%;
+  }
+  .carrierNameAndButton {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    h3 {
+      word-wrap: break-word;
+      font-size: 20px;
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .compareCtaContainer {
+    width: 100% !important;
+  }
+  .compareButton {
+    margin-left: 15px;
+  }
+  .compareMain {
+    padding-top: 0;
+  }
+}

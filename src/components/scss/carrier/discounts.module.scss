@@ -1,0 +1,90 @@
+@import '../variables.module.scss';
+.carrierTemplateTitle {
+  text-align: center;
+}
+.optionsContainer {
+  border: 3px solid $softGreen;
+  border-radius: 4px;
+  padding: 1em;
+  box-sizing: border-box;
+}
+.tableH {
+  @extend .fontOneBold;
+  height: 34px;
+  width: calc(100% / 3);
+  color: #000;
+  font-size: 24px;
+  text-align: left;
+  align-items: center;
+}
+.seeSomethingWrong {
+  @extend .fontOneRegular;
+  color: #acacac;
+  font-size: 18px;
+  text-align: right;
+}
+.letUsKnowLink {
+  @extend .seeSomethingWrong;
+  color: #acacac;
+  border: none;
+  margin: 0;
+  background-color: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.optionTitle {
+  @extend .fontOneSemibold;
+  color: #000;
+  font-size: 24px;
+  letter-spacing: -1px;
+  line-height: 29px;
+  margin-top: 1em;
+  font-size: 20px;
+}
+.optionDescription {
+  @extend .text;
+  font-size: 16px;
+  margin-top: 1em;
+}
+.seeMoreButton {
+  @extend .reusableButton;
+  width: 200px;
+  height: 30px;
+  margin: 2em 0;
+  align-self: center;
+}
+@media (max-width: $md) {
+  .carrierTemplateTitle {
+    line-height: 1em;
+  }
+  .paperContainer {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+  .optionsContainer {
+    background-color: #fff;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+  .coverageButtonsContainers {
+    display: none;
+  }
+  .row {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    th {
+      width: 100%;
+    }
+    h5 {
+      font-size: 16px;
+      margin: 1em 0 0;
+    }
+    p {
+      font-size: 14px;
+      margin-top: 0;
+      text-align: justify;
+    }
+  }
+}

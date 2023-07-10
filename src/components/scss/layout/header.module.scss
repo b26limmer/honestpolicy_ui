@@ -1,0 +1,21 @@
+@import '../variables.module.scss';
+
+.headerAvatarWrapper {
+}
+
+@media (max-width: $md) {
+  .headerAvatarWrapper {
+    display: none;
+  }
+  .headerLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    img {
+      left: 50%;
+      right: 0;
+      transform: translateX(-50%);
+    }
+  }
+}

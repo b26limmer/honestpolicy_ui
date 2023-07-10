@@ -1,0 +1,95 @@
+@import '../../../../scss/variables.module.scss';
+
+.formMultipleItems {
+  position: absolute;
+  left: -300px;
+  top: 0;
+}
+
+.formMultipleItemsInner {
+  width: 238px;
+  height: auto;
+  background: #f0f8ff;
+  border-radius: 4px;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.formMultipleItemsMain {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(#3070aa, 0.2);
+}
+
+.formMultipleItem {
+  background: rgba(#c7def3, 0.2);
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.formMultipleItemActive {
+  background: #c7def3;
+}
+
+.formMultipleItemTitle {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #081c33;
+}
+
+.formMultipleItemSubTitle {
+  font-size: 14px;
+  line-height: 16px;
+  color: #081c33;
+  opacity: 0.6;
+}
+
+.formMultipleItemsAdd {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #3070aa;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.formMultipleEdit {
+  right: -380px;
+  position: absolute;
+  top: 0;
+}
+
+.formMultipleItemsHidden {
+  display: none;
+}
+
+.formMultipleItemsBottomNone {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.formMultipleCloseIcon {
+  float: right;
+}
+
+@media (max-width: $md) {
+  .formMultipleItems {
+    position: static;
+    width: 100%;
+  }
+  .formMultipleItemsInner {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

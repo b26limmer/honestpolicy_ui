@@ -1,0 +1,61 @@
+@import '../../../../scss/variables.module.scss';
+
+.sidebarItem {
+  padding: 8px 26px !important;
+  font-family: Montserrat, sans-serif !important;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px !important;
+  span {
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-black-1;
+    font-weight: 600;
+  }
+  .sidebarItemIcon {
+    min-width: auto;
+    margin-right: 7px;
+    width: 30px;
+    svg {
+      width: 30px;
+      object-fit: contain;
+      height: 30px;
+    }
+  }
+  &.sidebarItemActive {
+    font-size: 16px;
+    line-height: 19px;
+    border-left: 4px solid $darkGreen;
+    margin-left: -4px;
+    span {
+      font-weight: 600 !important;
+      color: $electricBlue;
+    }
+  }
+}
+
+.sidebarItemSubListWrapper {
+  margin-left: 35px;
+  border-left: 4px solid #eaecea;
+  background: radial-gradient(#f1f2f9, #fff);
+  position: 100%;
+}
+.sidebarItemSubList {
+  white-space: nowrap;
+  padding: 5px 0 !important;
+  margin-bottom: 0px !important;
+  span {
+    color: #465566;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.sidebarItemText {
+  @extend .fontOneSemibold;
+  span {
+    @extend .fontOneSemibold;
+  }
+}

@@ -1,0 +1,103 @@
+@import '../../../../../scss/variables.module.scss';
+
+.carrierCollapse {
+  background-color: white;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.reviewText {
+  @extend .fontOneSemibold;
+  font-size: 24px;
+  margin: 0;
+  color: $newGreen;
+  margin-left: 18px;
+}
+.starsContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+.emojiRankImg {
+  height: 40px;
+  object-fit: contain;
+}
+.carrierCollapseItem {
+  padding: 16px 0 !important;
+  box-sizing: border-box;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.quotesCollapseItemIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carrierCollapseItemRightSide {
+  display: flex;
+  align-items: center;
+  svg {
+    font-size: 25px;
+  }
+
+  img {
+    width: 35px;
+    margin-right: 10px;
+  }
+}
+
+.carrierCollapseItemName {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #081c33;
+  display: flex;
+  justify-content: center;
+  svg {
+    color: $softGrey;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  span {
+    div {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
+.carrierCollapseItemIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carrierCollapseItemPrice {
+  margin-right: 41px;
+  font-size: 20px;
+  color: #00ad84;
+  font-weight: 600;
+}
+.carrierCollapseItemPadding {
+  padding: 0 !important;
+}
+.collapseBodyList {
+  padding: 0 1rem;
+  margin-left: 1rem;
+  border-left: 3px solid transparentize($color: $softGrey, $amount: 0.7);
+  display: flex;
+  flex-direction: column;
+  a {
+    margin-bottom: 1em;
+    font-size: 14px;
+    color: $softGreen;
+    cursor: pointer;
+    text-decoration: underline;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: $md) {
+}

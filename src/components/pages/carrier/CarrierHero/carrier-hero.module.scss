@@ -1,0 +1,495 @@
+@import '../../../scss/variables.module.scss';
+
+.carrierHero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(#00ad84, 0.1);
+  box-shadow: 0px 10px 20px rgba(15, 52, 86, 0.05);
+  border-radius: 4px;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  margin-top: 40px;
+  margin-bottom: 55px;
+}
+
+.heroPaper {
+  position: sticky;
+  top: 1;
+  transition: 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.carrierTemplateTitle {
+  height: fit-content;
+  margin: 0;
+  width: 70%;
+  text-align: center;
+}
+.carrierLogoContainer {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+.heroPaperShrink {
+  z-index: 50;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  height: 120px;
+  padding: 10px;
+  flex-direction: row;
+  align-items: flex-start;
+  transition: 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation: shrink 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  .ratingName {
+    line-height: 40px;
+  }
+  .reusableButton {
+    position: absolute;
+    width: 200px;
+    right: 24px;
+    top: 7px;
+  }
+  .scoresAndSections {
+    width: 80%;
+  }
+}
+.heroPaperResize {
+  @extend .heroPaper;
+  animation: resizeHero 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.heroSpace {
+  height: 240px;
+  margin-bottom: 120px;
+}
+.heroSpaceShrink {
+  height: 0;
+  animation: heroSpaceShrink 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+@keyframes heroSpaceShrink {
+  from {
+    height: 240px;
+    margin-bottom: 120px;
+  }
+  to {
+    margin-bottom: 4em;
+    height: 450px;
+  }
+}
+
+@keyframes resizeHero {
+  from {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 100%;
+    padding: 0;
+    box-sizing: content-box;
+  }
+  to {
+    box-sizing: content-box;
+    top: calc(70px + 30px);
+    left: 140px;
+    position: fixed;
+    width: calc(100% - 330px);
+  }
+}
+@keyframes shrink {
+  from {
+    width: calc(100% - 280px);
+    left: 10%;
+    height: 500px;
+    padding: 25px;
+  }
+  to {
+    padding: 10px;
+    width: 100%;
+    left: 0;
+    height: 120px;
+  }
+}
+.hide {
+  display: none;
+}
+.carrierLogoContainer {
+  display: flex;
+  justify-content: center;
+}
+.headingHeader {
+  @extend .spaceEvenlyRow;
+  margin-bottom: 20px;
+}
+.headingHeaderShrink {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 0 2em;
+}
+.headingHeaderResize {
+  @extend .headingHeader;
+  animation: resize 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+@keyframes resize {
+  from {
+    padding-bottom: 2em;
+    margin-bottom: 0;
+  }
+  to {
+    margin-bottom: 30px;
+    padding-bottom: 0;
+  }
+}
+.reusableButton {
+  width: 100%;
+}
+.carrierLogo {
+  width: 280px;
+  max-height: 80px;
+  object-fit: contain;
+}
+.headingContent {
+  display: flex;
+  width: 100%;
+}
+.smartScoreArea {
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 25px;
+}
+.smartScore {
+  @extend .columnContainer;
+  @extend .fontOneSemibold;
+  font-size: 72px;
+  color: #fff;
+  width: 300px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+.shieldImgWrapper {
+  position: absolute !important;
+}
+.smartScoreTag {
+  @extend .fontOneSemibold;
+  font-size: 18px;
+  margin: 0;
+  position: relative;
+  top: -2px;
+  right: -15px;
+}
+.smartScoreNumber {
+  @extend .fontOneSemibold;
+  margin: 0;
+  position: relative;
+  top: -2px;
+  right: -15px;
+}
+.scoresAndSections {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 70%;
+  min-height: 100%;
+}
+.scores {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  height: 90%;
+}
+.ratingName {
+  @extend .fontOneSemibold;
+  height: 19px;
+  width: 100%;
+  color: #4f4f4f;
+  font-size: 18px;
+  letter-spacing: -0.75px;
+  line-height: 22px;
+  text-align: center;
+  margin: 0 0 1em;
+}
+.ratingNameSmartScore {
+  margin: 15px 0;
+}
+.moreInfoButton {
+  border-radius: 10px;
+  border: 1px solid #4ca986;
+  height: 16px;
+  min-width: 16px;
+  position: absolute;
+  font-size: 14px;
+  margin: 4px 5px;
+  padding: 0;
+  background-color: $softerGreen;
+  &:hover {
+    cursor: help;
+  }
+  &::after {
+    content: 'i';
+    position: relative;
+    color: #4ca986;
+    top: -2px;
+    left: 0px;
+  }
+}
+.scoreContainer {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  position: relative;
+}
+.scoreContainerShrink {
+  @extend .scoreContainer;
+  height: 180px;
+  flex-direction: row;
+  height: 180px;
+  align-items: flex-start;
+  .moreInfoButton {
+    display: none;
+  }
+}
+.miniShield {
+  position: relative;
+  height: 100%;
+  width: 130px;
+}
+.miniShieldShrink {
+  @extend .miniShield;
+  animation: shrinkShield 0.9s cubic-bezier(0.165, 0.84, 0.44, 1);
+  margin: 0 0 1em;
+  box-sizing: border-box;
+  height: 40px;
+  p {
+    font-size: 13px;
+    line-height: 13px;
+  }
+  span {
+    display: none;
+  }
+}
+.shieldImageWrapper {
+  position: absolute;
+  left: calc(50% - 50px);
+  top: -8px;
+  z-index: 0;
+  width: 100px;
+}
+@keyframes shrinkShield {
+  from {
+    height: 100%;
+    font-size: 48px;
+  }
+  to {
+    height: 40px;
+    font-size: 13px;
+    line-height: 13px;
+    margin: 0 0 1em;
+  }
+}
+.ratingNumber {
+  @extend .smartScore;
+  position: relative;
+  z-index: 1;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: -5px;
+}
+.ratingNumberBase {
+  font-size: 18px;
+  line-height: 22px;
+}
+.industryAverageText {
+  @extend .fontOneRegular;
+  font-size: 14px;
+}
+
+.showTooltip {
+  position: absolute;
+  z-index: 10;
+  bottom: 105%;
+  right: -200px;
+  background-color: white;
+  color: #000;
+  text-align: left;
+  width: 400px;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  padding: 1em;
+  @extend .fontOneRegular;
+}
+.showTooltipShrinked {
+  @extend .showTooltip;
+  z-index: 20;
+  height: fit-content;
+  top: 0;
+  right: 0;
+}
+.sectionsContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  width: 100%;
+  position: absolute;
+  bottom: 1em;
+  left: -5%;
+}
+.sectionsContainerShrinked {
+  @extend .sectionsContainer;
+  margin-top: 0;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  left: 0;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 0 10%;
+}
+@media (max-width: $xl) {
+  .ratingNumberBase {
+    display: none;
+  }
+}
+@media (max-width: $xl) {
+  .ratingNumberBase {
+    display: none;
+  }
+}
+@media (max-width: $md) {
+  .headingHeader,
+  .headingHeaderResize {
+    animation: none;
+    flex-direction: column-reverse;
+  }
+
+  .scoresAndSections {
+    width: 100%;
+  }
+  .heroPaper,
+  .heroPaperShrink {
+    background-color: transparent;
+    box-shadow: none;
+    animation: none;
+    position: unset;
+  }
+  .headingContent {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .carrierTemplateTitle {
+    display: none;
+    width: unset;
+  }
+  .smartScore,
+  .smartScoreArea {
+    width: 100%;
+    max-width: 200px;
+  }
+  .smartScore {
+    width: 100%;
+  }
+  .graphArea {
+    background-color: #eee;
+  }
+  .graphHelpText {
+    background-color: transparent;
+  }
+
+  .scoreContainer {
+    margin: 0;
+    height: 180px;
+    width: calc(100% / 3);
+  }
+  .scores {
+    margin-top: 1em;
+  }
+  .miniShield {
+    width: 90px;
+    height: 100%;
+    .ratingNumber {
+      width: 100%;
+      font-size: 28px;
+      line-height: 30px;
+    }
+  }
+  .industryAverageText {
+    font-size: 14px;
+  }
+  .sectionsContainer {
+    display: none;
+  }
+  .showTooltip {
+    position: absolute;
+    left: calc((var(--idx) - 1) * -100px);
+    max-width: 70vw;
+    font-size: 14px;
+  }
+  .ratingNumber {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+
+  .carrierHero {
+    flex-direction: column;
+  }
+  .shieldImageWrapper {
+    left: calc(50% - 40px);
+    top: -5px;
+    z-index: 0;
+    width: 80px;
+  }
+}
+
+@media (max-width: $sm) {
+  .scores {
+    margin-top: 25px;
+  }
+  .smartScoreArea {
+    margin: 50px 0 0;
+  }
+  .scoreContainer {
+    text-align: center;
+    height: fit-content;
+  }
+  .industryAverageText {
+    margin-top: 3px;
+    font-size: 11px;
+  }
+  .ratingName {
+    font-size: 12px;
+  }
+  .ratingNameSmartScore{
+    font-size: 16px;
+  }
+  .moreInfoButton {
+    top: -15px;
+    right: -10px;
+  }
+  .miniShield {
+    height: 100px;
+  }
+  .shieldImageWrapper {
+    position: absolute;
+    left: calc(50% - 40px);
+    width: 80px;
+  }
+}

@@ -1,0 +1,60 @@
+@import '../../../../scss/variables.module.scss';
+
+.formLayout {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  width: 100%;
+  @media (max-width: $md) {
+    max-width: calc(100% - 150px);
+  }
+  @media (max-width: $sm) {
+    max-width: calc(100% - 2em);
+  }
+}
+.formLayoutMain {
+  display: block;
+  width: 100%;
+}
+.bottomLine {
+  border-radius: 10px;
+  border-bottom: 3px solid $colorGray3;
+}
+
+.formLayoutBig {
+  max-width: 100vw;
+  margin: unset;
+  > span {
+    text-align: center;
+  }
+}
+
+.formLayoutTitle {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 40px;
+  // margin-top: 22px;
+}
+
+.formLayoutTitleSmall {
+  cursor: pointer;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 40px;
+  margin-top: 22px;
+  width: 100%;
+}
+
+@media (max-width: $md) {
+  .formLayout {
+    padding-bottom: 100px;
+  }
+
+  .formLayoutTitle {
+    font-size: 32px;
+  }
+}

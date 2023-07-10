@@ -1,0 +1,21 @@
+@import '../variables.module.scss';
+.getQuotesButton {
+  @extend .reusableButton;
+  width: 200px;
+  height: 30px;
+  margin-left: 40px;
+}
+@media (max-width: $md) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .paperContainer {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .getQuotesButton {
+    margin: 1em 0;
+  }
+}

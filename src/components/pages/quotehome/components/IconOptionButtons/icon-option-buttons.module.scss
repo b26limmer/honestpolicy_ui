@@ -1,0 +1,50 @@
+@import '../../../../scss/variables.module.scss';
+.houseIconsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 1em;
+  margin: 10px 0 25px;
+}
+
+.houseIconButton {
+  box-sizing: border-box;
+  user-select: none;
+  padding: 0 1em 1em;
+  border: 2px solid #e2eaf3;
+  overflow-wrap: break-word;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  word-break: break-word;
+  hyphens: manual;
+  &:hover {
+    transform: scale(1.02);
+    border-color: $newGreen;
+  }
+}
+
+.iconOptionImage {
+  width: 60%;
+  max-height: 80px;
+  object-fit: contain;
+}
+.houseIconButtonSelected {
+  @extend .houseIconButton;
+  border: 2px solid $color-black-1;
+  font-weight: 600;
+}
+.optionIconHasError {
+  border: 2px solid red;
+  color: red;
+}
+@media #{$mx-small} {
+  .houseIconsContainer {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 5px;
+    margin: 10px 0 15px;
+  }
+}

@@ -1,0 +1,75 @@
+@import '../variables.module.scss';
+.container {
+  justify-content: space-between;
+  width: 100%;
+  padding: 2em 1em;
+  box-sizing: border-box;
+}
+.subtitle {
+  position: relative;
+  padding: 10px 0;
+}
+.subtitle:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 50px;
+  border: 2px solid $softGreen;
+}
+.aboutCarrierText {
+  @extend .columnContainer;
+  align-items: flex-start;
+  width: 50%;
+}
+.imageContainer {
+  @extend .container;
+  width: 45%;
+}
+.image {
+  max-width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+.carrierWebsiteLink {
+  @extend .reusableButton;
+  width: fit-content;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: $lg) {
+  .container {
+    flex-direction: column;
+    width: 100vw;
+  }
+  .aboutCarrierText,
+  .imageContainer {
+    width: 70%;
+    min-width: 500px;
+  }
+}
+@media only screen and (max-width: $lg) {
+  .container {
+    padding: 0;
+  }
+  .image {
+    width: 100%;
+    min-width: unset;
+  }
+  .aboutCarrierText,
+  .imageContainer {
+    width: 100%;
+    min-width: unset;
+    padding: 1em 2em;
+  }
+  .imageContainer {
+    padding: 1em 0;
+  }
+}
+@media #{$mq-xlarge} {
+  .text {
+    font-size: $base-font-size * 1.4;
+  }
+}

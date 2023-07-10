@@ -1,0 +1,60 @@
+@import '../../scss/variables.module.scss';
+
+.quoteFormAuto {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+}
+
+.quoteFormAutoInner {
+  background-color: #fff;
+}
+.quoteFormFinal {
+  background-color: white;
+  margin: 0;
+  padding-bottom: 0;
+  box-sizing: border-box;
+}
+
+.quoteFormAutoMain {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: 0 auto;
+}
+
+
+.quoteFormFinalBreadCrumb {
+  padding-left: 20px;
+}
+
+.error {
+  color: red;
+}
+
+@media (max-width: $lg) {
+  .quoteFormAutoMain {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $md) {
+  .quoteFormAutoMain {
+    padding-left: 0px;
+  }
+
+  .quoteFormFinal {
+    padding: 10px 0;
+  }
+
+  .quoteFormFinalStepNav {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: $sm) {
+  .quoteFormFinal {
+    padding: 0;
+  }
+}

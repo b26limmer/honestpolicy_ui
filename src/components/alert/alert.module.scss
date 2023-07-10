@@ -1,0 +1,223 @@
+@import '../scss/variables.module.scss';
+.alertContainer {
+  @extend .fontOneSemibold;
+  font-size: 18px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 24px 29px;
+  align-items: center;
+  width: calc(max(40%, 520px));
+  min-height: 90px;
+  position: fixed;
+  z-index: 5000;
+  bottom: 25px;
+  left: calc(min(30%, calc(50% - 260px)));
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 4px 4px 20px 0 transparentize($color: #0cad84, $amount: 0.8);
+  color: $color-black-1;
+  p {
+    margin: 0;
+    padding: 0 0.5em;
+  }
+  &:hover {
+    transition: transform ease-in 0.07s;
+    transform: scale(1.03);
+  }
+}
+.staticAlertContainer {
+  @extend .alertContainer;
+  position: relative;
+  width: 100% !important;
+  bottom: 0;
+  left: 0;
+  margin: 10px 0 20px;
+  p {
+    @extend .fontOneMedium;
+    font-size: 16px;
+  }
+}
+.alertShow {
+  animation: showMessage 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  @keyframes showMessage {
+    0% {
+      bottom: 0;
+    }
+    100% {
+      bottom: 25px;
+    }
+  }
+}
+.staticAlertShow {
+  animation: showStaticMessage 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  @keyframes showStaticMessage {
+    0% {
+      bottom: -25px;
+    }
+    100% {
+      bottom: 0;
+    }
+  }
+}
+
+.alertHidden {
+  display: none;
+}
+.alertEmoji {
+  height: 40px;
+  object-fit: contain;
+}
+.info {
+  border-color: #e8f2f0;
+  .alertLabel {
+    color: $color-black-1;
+    background-color: #e8f2f0;
+  }
+}
+.error {
+  border-color: #ad0000;
+  color: #ad0000;
+  span {
+    background-color: #ad0000 !important;
+  }
+  .alertLabel {
+    color: #fff;
+    background-color: #ad0000;
+  }
+}
+.success {
+  border-color: #ffca28;
+  .alertLabel {
+    color: $color-black-1;
+    background-color: #fff0c0;
+  }
+}
+.warning {
+  border-color: #020080;
+  color: #020080;
+  .alertLabel {
+    color: #fff;
+    background-color: #020080;
+  }
+}
+.alertLabel {
+  position: absolute;
+  box-sizing: border-box;
+  top: -1px;
+  left: -1px;
+  margin: 0;
+  border-radius: 0 0 6px 0;
+  padding: 1px 10px;
+  font-size: 12px;
+}
+.closeButton {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 0;
+  span {
+    background-color: $color-black-1;
+    width: 20px;
+    height: 2px;
+    position: relative;
+  }
+}
+.closeButtonOpen {
+  span:nth-child(1) {
+    animation: openCloseButtonTop 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+  span:nth-child(2) {
+    animation: openCloseButtonBottom 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+}
+.closeButtonClosed {
+  span:nth-child(1) {
+    animation: closeCloseButtonTop 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+  span:nth-child(2) {
+    animation: closeCloseButtonBottom 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+}
+@keyframes openCloseButtonTop {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    top: 1px;
+  }
+  100% {
+    top: 1px;
+    transform: rotateZ(45deg);
+  }
+}
+@keyframes openCloseButtonBottom {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    top: -1px;
+  }
+  100% {
+    top: -1px;
+    transform: rotateZ(-45deg);
+  }
+}
+@keyframes closeCloseButtonTop {
+  0% {
+    top: 1px;
+    transform: rotateZ(45deg);
+  }
+  50% {
+    top: 9px;
+    transform: rotateZ(0);
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes closeCloseButtonBottom {
+  0% {
+    top: -1px;
+    transform: rotateZ(-45deg);
+  }
+  50% {
+    top: -9px;
+    transform: rotateZ(0);
+  }
+  100% {
+    top: 0;
+  }
+}
+@media #{$mx-small} {
+  .alertContainer {
+    width: calc(100% - 2em);
+    min-height: 90px;
+    padding: 15px;
+    height: fit-content;
+    bottom: unset;
+    top: 75px;
+    left: 1em;
+    font-size: 14px;
+    &:hover {
+      transform: none;
+    }
+  }
+  .alertEmoji {
+    height: 30px;
+  }
+  .staticAlertContainer {
+    top: 0;
+    left: 0;
+    padding: 25px 1em 20px;
+  }
+}

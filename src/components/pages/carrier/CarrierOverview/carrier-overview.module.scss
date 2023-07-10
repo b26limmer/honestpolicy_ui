@@ -1,0 +1,87 @@
+@import '../../../scss/variables.module.scss';
+
+.carrierOverviewTitle {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  color: #000000;
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 50px;
+}
+
+.linesOfBusiness {
+  display: flex;
+  flex-direction: column;
+}
+
+.linesOfBusinessTitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: Montserrat, sans-serif;
+  color: #000000;
+}
+
+.sectionLink {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e2eaf3;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-right: 10px;
+  padding: 20px 30px;
+  text-decoration: none;
+  margin-bottom: 5px;
+  img {
+    margin-left: 0;
+  }
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: whitesmoke;
+  }
+}
+.buttonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.carrierTemplateText {
+  margin-bottom: 0;
+}
+.lineIcon {
+  width: 50px;
+  margin-left: 2em;
+  margin-right: 0.5em;
+  object-fit: contain;
+  max-height: 40px;
+}
+@media (max-width: $md) {
+  .paperContainer {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .sectionLink {
+    // height: 80px;
+    display: flex;
+    align-items: center;
+    img {
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+  }
+  .lineIcon {
+    margin: 0 0 1em;
+  }
+  .linesOfBusiness {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: $sm) {
+  .carrierOverviewTitle {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}

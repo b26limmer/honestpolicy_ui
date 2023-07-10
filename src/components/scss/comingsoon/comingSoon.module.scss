@@ -1,0 +1,151 @@
+@import '../variables.module.scss';
+
+.comingSoon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.container {
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #f1f9f5, #effff7);
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.logoWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+
+  img {
+    max-width: 500px;
+  }
+}
+
+.slogan {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 42px;
+  color: #020080;
+}
+
+.emailForm {
+  width: 564px;
+  padding: 48px 56px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.getNotifiedText {
+  // Get notified when we launch!
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 24px;
+  color: $color-black-1;
+}
+
+.emailInput {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  button {
+    flex: 1;
+    padding: 10px 30px;
+    height: 48px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.termPolicyCheckbox {
+  font-size: 16px;
+  line-height: 16px;
+  color: #081c33;
+  font-size: 400;
+  a {
+    color: $softGreen;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: rgba($softGreen, 0.3);
+    }
+  }
+}
+
+.agreeText {
+  // display: flex;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 14px;
+  color: #22222a;
+  text-align: justify;
+}
+
+.visitCenter {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 18px;
+  color: #008462;
+  margin-top: 20px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 8px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-black-1;
+}
+
+.emailReceivedMsg {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 24px;
+  color: $color-black-1;
+  margin-top: 26px;
+}
+
+@media only screen and (max-width: 600px) {
+  .logoWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    margin-top: 64px;
+
+    img {
+      max-width: 340px;
+    }
+  }
+
+  .slogan {
+    font-size: 30px;
+    max-width: 320px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 10px;
+  }
+
+  .emailForm {
+    max-width: 340px;
+    padding: 32px 12px;
+    // margin-top: 50px;
+  }
+
+  .comingSoon {
+    height: 124px;
+  }
+}

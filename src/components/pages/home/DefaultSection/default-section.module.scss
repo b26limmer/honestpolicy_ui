@@ -1,0 +1,83 @@
+@import '../../../scss/variables.module.scss';
+
+.defaultSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 32px 0;
+  min-height: 400px;
+}
+
+.defaultSectionImage {
+  flex: 1;
+  max-width: 600px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.defaultSectionDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 82px;
+  flex: 1;
+  max-width: 520px;
+}
+
+.defaultSectionTitle {
+  margin-bottom: 25px;
+}
+
+.defaultSectionDescription {
+  margin-bottom: 32px;
+}
+
+.defaultSectionReversed {
+  flex-direction: row-reverse;
+  .defaultSectionDetails {
+    margin-left: 0;
+    margin-right: 82px;
+  }
+}
+
+@media only screen and (max-width: $md) {
+  .defaultSection {
+  }
+
+  .defaultSectionDetails {
+    margin-left: 24px;
+  }
+
+  .defaultSectionReversed {
+    .defaultSectionDetails {
+      margin-right: 24px;
+    }
+  }
+
+  .defaultSectionImage {
+    height: 400px;
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+@media only screen and (max-width: $sm) {
+  .defaultSection {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .defaultSectionImage {
+    height: 257px;
+    img {
+      object-fit: cover;
+    }
+  }
+  .defaultSectionDetails {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 20px !important;
+  }
+}

@@ -1,0 +1,26 @@
+@import '../general.module.scss';
+.optionsInactive {
+  display: none;
+}
+.formSection {
+  padding: 70px 1em 0;
+}
+.sliderToggleContainer {
+  width: 100%;
+  button {
+    margin-bottom: 0;
+  }
+  div {
+    margin-top: 0;
+  }
+  div:nth-child(1n + 2) {
+    border-radius: 0;
+  }
+  & > div:last-of-type {
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 25px;
+  }
+  div:nth-child(1n + 3) {
+    border-top: 1px solid #dbdbdb;
+  }
+}

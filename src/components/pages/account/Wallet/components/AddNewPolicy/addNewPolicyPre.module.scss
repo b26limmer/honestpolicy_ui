@@ -1,0 +1,261 @@
+@import "../../../../../scss/variables.module.scss";
+
+.policyTypeFormRoot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .policyTypeFormTitle {
+    font-size: 1.8rem;
+    font-weight: 500;
+    align-self: flex-start;
+  }
+}
+
+.policyTypeFormIcon {
+  font-size: 3rem !important;
+}
+
+.policyTypeFormInner {
+  flex: 1;
+}
+
+.policyTypeIcon{
+  font-size: 7rem !important;
+}
+
+.policyTypeRoot {
+  display: flex;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  label {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .policyTypeIconBlock{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    button {
+      @include borderContainer;
+      color: $softGrey;
+      border-radius: 5px;
+      margin: 2rem;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 11rem;
+      &:hover {
+        color: $softGreen;
+        transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+    }
+  }
+}
+
+.policyTypeFormBlock {
+  display: flex;
+  flex-direction: row;
+  & > div {
+    flex: 1;
+    display: flex;
+    div {
+      margin-left: 1rem;
+    }
+  }
+
+  & > div:nth-child(2) {
+    flex: 2;
+  }
+  span {
+    font-weight: 200;
+  }
+}
+
+.policyTypeFormAddressBlock {
+  & > div:nth-child(2) {
+    flex-direction: column;
+  }
+
+  .policyTypeFormAddressRowBlock {
+    margin-bottom: 1rem;
+    & > div {
+      margin: 0;
+    }
+    & > div:nth-child(2) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  .policyTypeFormAddressInput {
+    width: 95%;
+  }
+}
+
+.policyTypeFormCarsInsured {
+  & > div:nth-child(2) {
+    flex-direction: column;
+    display: flex;
+  }
+  .policyTypeFormCarsInsuredInputBlock {
+    display: flex;
+    margin-left: 0;
+    input {
+      width: 110%;
+    }
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  label {
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+    color: #3070aa;
+    cursor: pointer;
+  }
+}
+
+.policyTypeFormCoverageInput {
+  label {
+    font-size: 12px;
+    font-weight: 200;
+  }
+  input[type='date'] {
+    &::-webkit-datetime-edit-fields-wrapper {
+      float: left;
+    }
+    &::-webkit-datetime-edit {
+      padding: 0.2rem;
+    }
+    &::-webkit-calendar-picker-indicator {
+      margin-left: 5px;
+    }
+  }
+}
+
+.policyTypeFormSubmitBlock {
+  span {
+    flex: 1;
+    display: flex;
+    align-self: center;
+    color: $softGreen;
+    cursor: pointer;
+    svg {
+      display: flex;
+      align-self: center;
+      margin-right: 5px;
+    }
+  }
+
+  & > div {
+    flex: 3;
+    display: flex;
+  }
+}
+
+.policyTypeFormTabRoot {
+  flex: 3;
+  .policyTypeFormTabIcon {
+    flex-direction: row;
+    text-transform: capitalize;
+    label {
+      background-color: $softGreen;
+      border-radius: 50%;
+      width: 25px;
+      color: white;
+      margin-right: 10px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      height: 25px;
+    }
+  }
+}
+
+.policyTypeFormButton {
+  float: right;
+}
+
+.policyTypeFormDialogTitle {
+  margin-right: 30px;
+  font-weight: 600;
+}
+
+.policyTypeFormButtonBlock {
+  flex-direction: row-reverse;
+  button {
+    width: 150px;
+    height: 45px;
+    margin-top: 12px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    box-shadow: unset;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #e2eaf3;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #00ad84;
+    color: white;
+
+    &:hover {
+      color: #00ad84;
+      background-color: white;
+    }
+  }
+  .policyTypeFormCancelBtn {
+    color: #00ad84;
+    background-color: white;
+    &:hover {
+      background-color: #00ad84;
+      color: white;
+    }
+  }
+}
+
+.policyTypeFormTabPanel {
+  border-top: 1px #e4e4e4 solid;
+}
+
+@media (max-width: $sm) {
+  .policyTypeIcon {
+    font-size: 4rem !important;
+  }
+
+  .policyTypeFormIcon {
+    font-size: 2rem !important;
+  }
+
+  .customizedDialogContentRoot {
+    padding: 0 !important;
+  }
+
+  .policyTypeFormAddressBlock {
+    .policyTypeFormAddressRowBlock {
+      & > div, & > div:nth-child(2) {
+        margin: 0;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .policyTypeFormCoverageBlock {
+    & > div:nth-child(2) {
+      flex-direction: column;
+    }
+    input {
+      width: 95%;
+    }
+  }
+}

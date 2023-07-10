@@ -1,0 +1,58 @@
+@import '../scss/variables.module.scss';
+.infoContainer {
+  position: relative;
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  margin-top: 50px;
+  &:hover {
+    text-decoration: underline;
+    cursor: help;
+  }
+}
+.infoText {
+  @extend .text;
+  font-weight: 600;
+  text-decoration: none;
+  color: $newGreen;
+}
+.infoIcon {
+  @extend .text;
+  font-style: normal;
+  border-radius: 100%;
+  background-color: #008462;
+  color: #fff;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 10px;
+}
+.mr {
+  margin-right: 1em;
+}
+.helpTextContainer {
+  @include borderContainer;
+  padding: 1em;
+  background-color: #fff;
+  min-width: 200px;
+  position: absolute;
+  z-index: 1000;
+  top: 2em;
+  left: 50%;
+  span {
+    @extend .text;
+    margin: 0;
+  }
+}
+@media #{$mx-small} {
+  .helpTextContainer {
+    box-sizing: border-box;
+    position: fixed;
+    width: calc(100% - 2em);
+    left: 1em;
+    top: 25%;
+  }
+}

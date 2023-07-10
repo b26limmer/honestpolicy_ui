@@ -1,0 +1,107 @@
+@import '../../scss/variables.module.scss';
+
+.quoteFormBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 33px 100px;
+  box-shadow: -10px -10px 20px rgba(15, 52, 86, 0.02);
+}
+
+.quoteFormBottomStep {
+  font-size: 14px;
+  font-weight: bold;
+  color: #44586f;
+}
+
+.quoteFormBottomButtons {
+  > button {
+    margin-left: 20px;
+  }
+}
+
+.bottomLayout {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  background-color: white;
+  text-align: center;
+}
+
+.btnBack {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-left: 3rem;
+  margin-top: 2.6rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.startOverBtn {
+  @extend .btnBack;
+  right: 0;
+  left: unset;
+  margin-right: 3rem;
+  margin-left: 0;
+  background-color: transparent;
+  border: none;
+}
+.btnContinue {
+  margin: 2rem auto;
+  padding: 0.5rem 6rem;
+  padding-top: 0.6rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
+  background-color: $darkGreen;
+  border-radius: 4px;
+  box-shadow: 0 0.4rem 1.5rem rgba($darkGreen, 0.6);
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0.4rem 1.5rem rgba($darkGreen, 0.3);
+  }
+}
+.loading {
+  position: fixed;
+  z-index: 10;
+  top: calc(50% - 75px);
+  left: calc(50% - 75px);
+}
+@media (max-width: $md) {
+  .quoteFormBottom {
+    padding: 19px 22px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .quoteFormBottomButtons {
+    button {
+      margin-left: 8px;
+    }
+  }
+}
+@media #{$mx-small} {
+  .bottomLayout {
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+  .btnBack {
+    position: unset;
+    margin: 0 0 1em;
+  }
+  .startOverBtn {
+    position: absolute;
+    bottom: -100px;
+    right: unset;
+    left: unset;
+    left: calc(50% - 60px);
+    width: 120px;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,57 @@
+@import '../variables.module.scss';
+.columnContainer {
+  padding: 100px 0 0;
+  background-image: linear-gradient(180deg, #f4faf8 0%, #ffffff 50%);
+}
+.sectionTitle {
+  @extend .fontOneSemibold;
+  color: $bgBlue;
+  font-size: 40px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  span {
+    color: $black;
+    font-weight: normal;
+  }
+}
+.text {
+  font-size: 20px;
+  max-width: 700px;
+  text-align: center;
+}
+.link {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  @extend .text;
+  font-weight: 600;
+  color: $darkGreen;
+  margin-bottom: 100px;
+}
+
+@media #{$mx-medium} {
+  .columnContainer {
+    padding-top: 50px;
+  }
+  .sectionTitle {
+    font-size: 30px;
+    padding: 0 0.5em;
+    text-align: center;
+  }
+  .text {
+    padding: 0 0.5em;
+    font-size: 18px;
+  }
+  .link {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+  .smartScoreContainer {
+    height: 530px;
+  }
+  .smartScoreTitle {
+    padding: 0 0.5em;
+    font-size: 28px;
+  }
+}

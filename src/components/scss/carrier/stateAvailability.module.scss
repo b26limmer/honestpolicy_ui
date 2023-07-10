@@ -1,0 +1,59 @@
+@import '../variables.module.scss';
+.availabilityContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.carrierTemplateTitle {
+  text-align: center;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  color: #000000;
+}
+
+.map {
+  width: 65%;
+  margin: 0 auto;
+}
+.linesButtons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.lineOfBusinessButtonSelected {
+  @extend .reusableButton;
+  margin: 0 10px;
+  height: 30px;
+  width: 120px;
+}
+.lineOfBusinessButton {
+  @extend .lineOfBusinessButtonSelected;
+  background-color: transparent;
+  color: $softGreen;
+}
+@media (max-width: $md) {
+  .carrierTemplateTitle {
+    line-height: unset;
+  }
+  .linesButtons {
+    margin: 1em 0 0;
+  }
+
+  .map {
+    width: 100%;
+    margin: 1em auto;
+  }
+}
+.stateAvailabilityTooltip {
+  color: black;
+  font-family: 'Montserrat';
+
+  h2 {
+    font-weight: 500;
+  }
+}

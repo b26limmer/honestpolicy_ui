@@ -1,0 +1,203 @@
+@import '../../../scss/variables.module.scss';
+
+.compareRatings {
+  padding-top: 56px;
+}
+.compareRatingsInner {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.sectionTitle {
+  text-align: left !important;
+}
+.tooltipIcon {
+  background-color: $newGreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  place-self: center;
+  position: absolute;
+  right: -10px;
+  top: calc(50% - 10px);
+  font-size: 16px;
+  min-width: 20px;
+  height: 20px;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  border-radius: 100%;
+  font-style: normal;
+  cursor: pointer;
+}
+.infoTextContainer {
+  @include borderContainer;
+  z-index: 100;
+  position: fixed;
+  top: calc(50% - 150px);
+  left: calc(50% - 200px);
+  width: 400px;
+  box-sizing: border-box;
+  padding: 1em;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.infoText {
+  @extend .text;
+  margin: 0;
+}
+.compareRatingsTable {
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(15, 52, 86, 0.05);
+  border-radius: 4px;
+  padding: 5px 24px;
+}
+
+.compareRatingsTitle {
+  text-align: center;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  margin-bottom: 48px;
+  font-weight: 600;
+}
+
+.compareRatingsRow {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  &:nth-child(2n) {
+    background: #f2f6fa;
+    border-radius: 2px;
+  }
+}
+
+.compareRatingsCells {
+  display: flex;
+  justify-content: space-between;
+  margin-right: -15px;
+  width: 100%;
+}
+
+.compareRatingsCell {
+  margin-left: 27px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  h3 {
+    display: flex;
+    justify-content: center;
+  }
+}
+.carrierName {
+  @extend .fontOneSemibold;
+}
+.compareRatingsCellTitle {
+  font-size: 32px;
+  line-height: 24px;
+  text-align: center;
+  color: #00ad84;
+  font-weight: 600;
+}
+
+.carrierTemplateSectionTitle {
+  width: 250px;
+  position: relative;
+}
+
+.compareRatingsTitle {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+}
+
+@media (max-width: $md) {
+  .compareRatingsTable {
+    flex-direction: column;
+    padding: 5px;
+  }
+  .compareRatingsCells {
+    flex-direction: column;
+  }
+  .compareRatingsRow {
+    flex-direction: column;
+    padding: 10px 5px;
+    &:nth-child(2n) {
+      background-color: white;
+    }
+  }
+  .compareRatingsCell {
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e1eaf3;
+    padding: 14px 10px;
+    &:last-child {
+      border-bottom: none;
+    }
+    h3 {
+      font-size: 20px;
+      color: #000000;
+      margin: 0;
+    }
+  }
+  .compareRatingsCellTitle {
+    font-size: 32px;
+    line-height: 24px;
+    text-align: center;
+    color: #00ad84;
+  }
+
+  .carrierTemplateSectionTitle {
+    width: 100%;
+    background: #f2f6fa;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .compareRatingsTitle {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: $sm) {
+  .tooltipIcon {
+    right: 1em;
+  }
+  .infoTextContainer {
+    left: 1em;
+    width: calc(100% - 2em);
+  }
+  .carrierTemplateSectionTitle {
+    font-size: 20px;
+  }
+  .compareRatingsCell {
+    h3 {
+      font-size: 16px;
+      justify-content: flex-start;
+    }
+  }
+  .compareRatingsCellTitle {
+    font-size: 16px;
+  }
+  .compareRatings {
+    padding-top: 0;
+  }
+}

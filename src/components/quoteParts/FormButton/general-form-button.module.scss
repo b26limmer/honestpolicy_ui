@@ -1,0 +1,50 @@
+.formButton {
+  background: #00ad84;
+  box-shadow: 10px 10px 20px rgba(0, 173, 132, 0.25);
+  border-radius: 4px;
+  padding: 15px 22px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #00ad84;
+  outline: #00ad84;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: white;
+    color: #00ad84;
+  }
+}
+
+.formButtonDisabled {
+  background: #66ceb5;
+  border: 1px solid #66ceb5;
+  box-shadow: 10px 10px 20px rgba(0, 173, 132, 0.25);
+  border-radius: 4px;
+  cursor: not-allowed;
+  &:hover {
+    background: #66ceb5;
+    border: 1px solid #66ceb5;
+    color: white;
+  }
+}
+
+.formButtonOutlineHome {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #00ad84;
+  border: 1px solid #e2eaf3;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: unset;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: #00ad84;
+    color: white;
+  }
+}

@@ -1,0 +1,147 @@
+@import '../variables.module.scss';
+.heroTitle {
+  font-size: 42px;
+  color: $bgBlue;
+}
+.columnContainer {
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #f1f9f5, #effff7);
+  padding: 50px 1em;
+}
+.description {
+  @extend .fontOneSemibold;
+  font-size: 24px;
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.hr {
+  background-color: #dbdbdb;
+  height: 3px;
+  width: calc(min(100%, 670px));
+  margin: auto;
+  padding: 0 115px;
+  box-sizing: border-box;
+  border: none;
+  margin-top: 50px;
+}
+.contactUsForm {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: calc(min(100%, 670px));
+  display: flex;
+  justify-content: center;
+  label {
+    @extend .text;
+    color: $color-black-1;
+  }
+  width: 100%;
+  flex-wrap: wrap;
+  .inputContainer {
+    box-sizing: border-box;
+    width: 50%;
+    margin-top: 15px;
+    &:nth-child(1),
+    &:nth-child(6) {
+      width: 100%;
+    }
+    &:nth-child(2),
+    &:nth-child(4) {
+      padding-right: 5px;
+    }
+    &:nth-child(3),
+    &:nth-child(5) {
+      padding-left: 5px;
+    }
+  }
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.input {
+  @extend .text;
+  height: 50px;
+  font-size: 18px;
+  color: #747a7e;
+  border: 1px solid #dbdbdb;
+  padding: 0 27px;
+}
+.textarea {
+  box-sizing: border-box;
+  padding: 1em 27px;
+  height: 218px;
+}
+.inputError {
+  border-color: red;
+}
+.submitBtn {
+  border: 2px solid $newGreen !important;
+  background-color: $newGreen !important;
+  color: #fff !important;
+  margin-top: 50px;
+  width: 220px !important;
+  place-self: center !important;
+  &:hover {
+    background-color: #fff !important;
+    color: $newGreen !important;
+  }
+}
+.formError {
+  @extend .text;
+  color: red;
+  position: absolute;
+  bottom: -20px;
+}
+.thankYouMessage {
+  margin: 1em 0;
+  font-size: 30px;
+}
+@media #{$mx-medium} {
+  .contactUsForm {
+    flex-direction: column;
+    .inputContainer {
+      box-sizing: border-box;
+      &:nth-child(1n) {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+  .heroTitle {
+    font-size: 34px;
+  }
+  .description {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 1em;
+  }
+}
+@media #{$mx-small} {
+  .columnContainer {
+    padding: 20px 1em 50px;
+  }
+  .input {
+    padding: 0 1em;
+  }
+  .textarea {
+    padding: 0.5em 1em;
+    height: 4em;
+  }
+  .submitBtn {
+    margin-top: 20px;
+    width: 100% !important;
+  }
+  .hr {
+    margin-top: 25px;
+  }
+  .thankYouMessage {
+    text-align: center;
+  }
+}

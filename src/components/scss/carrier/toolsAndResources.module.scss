@@ -1,0 +1,31 @@
+@import '../variables.module.scss';
+.carrierTemplateTitle {
+  text-align: center;
+}
+.introductionText {
+  @extend .text;
+  width: 50%;
+  margin: auto;
+  min-width: 500px;
+}
+.toolTitle {
+  @extend .carrierTemplateTitle;
+  font-size: 20px;
+  margin: 2em 0 1em;
+}
+.toolContainer {
+  @extend .columnContainer;
+  width: 50%;
+  margin: auto;
+  min-width: 500px;
+}
+.ctaButton {
+  @extend .reusableButton;
+  margin: 0 0 1em;
+}
+
+@media screen and (max-width: $md) {
+  .toolContainer {
+    width: 100%;
+  }
+}

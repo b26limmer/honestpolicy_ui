@@ -1,0 +1,62 @@
+@import '../../../../scss/variables.module.scss';
+
+.stepNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  max-width: 610px;
+  margin: 0 auto;
+}
+
+.stepNavItem {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e1eaf3;
+  border-radius: 50%;
+  cursor: pointer;
+  svg {
+    fill: #69798c;
+  }
+}
+
+.stepNavItemActive {
+  border: 1px solid #00ad84;
+  background-color: #e6f9f4;
+  svg,
+  path {
+    fill: #00ad84;
+  }
+}
+
+.line {
+  width: 48px;
+  height: 1px;
+  background-color: #e2eaf3;
+  margin: 0 5px;
+}
+
+.lineActive {
+  background-color: #00ad84;
+}
+
+@media (max-width: $md) {
+  .line {
+    width: 48px;
+  }
+}
+
+@media (max-width: $sm) {
+  .stepNavItem {
+    width: 40px;
+    height: 40px;
+  }
+  .line {
+    width: 10px;
+  }
+}

@@ -1,0 +1,66 @@
+@import '../../scss/variables.module.scss';
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.label {
+  flex: 1;
+  max-width: 100px;
+  text-align: right;
+  min-width: 190px;
+  margin-right: 27px;
+  font-size: 18px;
+  letter-spacing: -1.33px;
+  color: #626263;
+  font-weight: 500;
+}
+
+.input {
+  flex: 3;
+  border-radius: 5px;
+  border: 2px solid #808080;
+  height: 36px;
+  width: 100%;
+  min-width: 380px;
+  text-indent: 10px;
+  font-size: 15px;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.inputsmall {
+  min-width: 30px;
+  max-width: 50px;
+  margin: 0 10px;
+  flex: 1;
+}
+.inputmiddle {
+  min-width: 194px;
+  flex: 2;
+}
+
+.inputError input {
+  border-color: red;
+}
+
+@media (max-width: $md) {
+  .label {
+    display: none;
+  }
+  .input {
+    min-width: auto;
+    max-width: 100%;
+  }
+  .inputsmall {
+    min-width: auto;
+    max-width: 100%;
+  }
+  .inputmiddle {
+    min-width: auto;
+    max-width: 100%;
+  }
+}

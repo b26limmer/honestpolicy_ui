@@ -1,0 +1,83 @@
+@import '../../scss/variables.module.scss';
+.container {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  grid-template-columns: repeat(var(--columns, 1), 1fr);
+  gap: 0 1em;
+}
+.optionContainer {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.optionButton {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 1em;
+  background-color: #fff;
+  border: 2px solid #99aab5;
+  margin: 0;
+  margin-bottom: 13px;
+  cursor: pointer;
+  &:hover {
+    background-color: #f1f1f1;
+    box-shadow: 2px 2px 5px 1px #f1f1f1;
+  }
+}
+.optionName {
+  @extend .fontOneRegular;
+  text-align: left;
+}
+.checked {
+  color: $color-black-1 !important;
+}
+
+.hasError {
+  @extend .fontOneRegular;
+  color: red;
+  border-color: red;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.hide {
+  display: none;
+}
+.checkNameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.removeButton {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+.showMoreButton {
+  @extend .fontOneRegular;
+  display: none;
+  border: none;
+  background-color: transparent;
+  margin: 1em 0;
+  font-size: 16px;
+  text-decoration: underline;
+}
+.infoText {
+  margin-top: 0 !important;
+  text-align: left;
+}
+@media #{$mx-small} {
+  .container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .hideOption {
+    display: none;
+  }
+  .showMoreButton {
+    display: block;
+  }
+}

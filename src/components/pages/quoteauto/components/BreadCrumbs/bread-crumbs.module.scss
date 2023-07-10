@@ -1,0 +1,24 @@
+@import '../../../../scss/variables.module.scss';
+
+.root {
+  span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #081c33;
+    &:last-child {
+      font-size: 14px;
+      line-height: 16px;
+      color: #081c33;
+      opacity: 0.6;
+    }
+  }
+}
+
+.separator {
+  margin: 0 5px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #081c33;
+  opacity: 0.4;
+}

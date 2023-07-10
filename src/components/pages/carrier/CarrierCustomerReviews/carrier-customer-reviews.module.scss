@@ -1,0 +1,368 @@
+@import '../../../scss/variables.module.scss';
+
+.carrierTemplateTitle {
+  text-align: center;
+}
+.miniPaper {
+  width: 45%;
+}
+.avgReviewScore {
+  @extend .subtitle;
+  font-size: 72px;
+  text-align: center;
+}
+.reviewsSummaryContainer {
+  @extend .spaceEvenlyRow;
+  display: flex;
+  justify-content: space-between;
+}
+.reviewsScore {
+  flex-direction: row;
+}
+
+.reviewSummary {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.reviewSummaryStats {
+  display: flex;
+  flex: 3;
+}
+.reviewSummaryAction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 2;
+  margin-left: 50px;
+}
+
+.reviewSummaryActionButton {
+  width: 100%;
+}
+
+.reviewSummaryActionInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.scorePaper {
+  position: relative;
+  height: calc(190px - 55px);
+  padding-bottom: 70px;
+  overflow: hidden;
+}
+.leftScoreColumn {
+  flex: 1;
+}
+.greenBase {
+  background-color: $softGreen;
+  @extend .text;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.rightScoreColumn {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  max-width: calc(100% / 3 * 2 - 40px);
+}
+.graphArea {
+  width: 100%;
+  margin: 1em 1em;
+}
+.scoreVoteRow {
+  display: flex;
+  align-items: center;
+}
+.emoticon {
+  height: 30px;
+  width: 30px;
+}
+.totalReviewsText {
+  @extend .text;
+  min-width: 20px;
+  text-align: center;
+}
+.ellipse {
+  @extend .center;
+
+  border-radius: 100%;
+}
+.thumb {
+  height: 152px;
+  width: 152px;
+  object-fit: contain;
+}
+.recommendContainer {
+  text-align: center;
+  display: flex;
+  margin-top: 30px;
+}
+.recommendPercentage {
+  @extend .title;
+  height: 86px;
+  width: 100%;
+  color: #1a1919;
+  font-size: 72px;
+  text-align: center;
+}
+
+.recommendText {
+  text-align: left;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.recommendPaper {
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+}
+
+.seeMoreContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .getQuotesButton {
+    margin: 0 0 2em;
+  }
+}
+.getQuotesButton {
+  @extend .reusableButton;
+  width: 200px;
+  height: 30px;
+  margin: 2em 0 0;
+}
+.mostLikedReviewContainer {
+  flex-direction: column;
+  display: flex;
+  width: 50%;
+  padding-right: 1em;
+  box-sizing: border-box;
+}
+.positiveNegativePaperContainer {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mostLikedPositive,
+.mostLikedNegative {
+  @extend .title;
+  font-size: 18px;
+}
+.mostLikedPositive {
+  color: $softGreen;
+}
+.mostLikedNegative {
+  color: #d73535;
+}
+.mostReviewTitle {
+  @extend .title;
+  width: 100%;
+  color: #1a1919;
+  font-size: 24px;
+}
+.filterContainer {
+  display: flex;
+}
+.filterButton {
+  @extend .text;
+  margin-left: 1em;
+  background-color: transparent;
+  box-sizing: border-box;
+  height: 27px;
+  width: 120px;
+  border: 2.5px solid #1a1919;
+}
+.filterOption {
+  @extend .text;
+}
+.reviewerFirstName {
+  @extend .fontOneSemibold;
+  font-size: 24px;
+  margin: 0 !important;
+}
+.reviewerLineOfBusiness {
+  @extend .text;
+  font-size: 14px;
+}
+.singleReviewTop {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.starIcon {
+  width: 20px;
+  margin-left: 3px;
+}
+
+.helpfulCtaContainer {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.likeButton {
+  background-color: $softBackground;
+  border-radius: 30px;
+  height: 50px;
+  border: none;
+  width: 50px;
+  padding: 0;
+  margin-top: 1em;
+  &:hover {
+    background-color: $softGrey;
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 1pt 1pt $softGreen;
+  }
+}
+
+.likeImage {
+  height: 25px;
+  object-fit: contain;
+}
+
+@media (max-width: $xl) {
+  .miniPaper {
+    width: 43%;
+  }
+}
+@media (max-width: $md) {
+  .reviewsSummaryContainer {
+    flex-direction: column !important;
+  }
+  .miniPaper {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2em;
+    flex-direction: column;
+  }
+  .rightScoreColumn {
+    padding: 0;
+    margin: 0;
+    max-width: unset;
+  }
+  .reviewContainer {
+    margin-bottom: 2em;
+  }
+  .getQuotesButton {
+    margin: 2em 0 1em;
+    width: 100%;
+  }
+  .singleReviewTop,
+  .singleReviewBody {
+    flex-direction: column;
+  }
+  .reviewDataContainer {
+    width: 100%;
+  }
+  .helpfulCtaContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .reviewData {
+    // @extend .reviewerLineOfBusiness;
+    text-align: right;
+    margin: 0;
+  }
+
+  .allReviewsHead {
+    flex-direction: column;
+    margin-bottom: 2em;
+  }
+  .filterContainer {
+    width: 100%;
+  }
+  .filterButton {
+    width: fit-content;
+  }
+
+  .reviewSummary {
+    flex-direction: column;
+  }
+
+  .reviewSummaryStats {
+    width: 100%;
+  }
+
+  .rightScoreColumn {
+    margin-left: 30px;
+  }
+
+  .reviewSummaryAction {
+    margin-left: 0;
+  }
+
+  .reviewSummaryActionInner {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .recommendContainer {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      margin-left: 30px;
+      text-align: left;
+    }
+  }
+  .carrierTemplateTitle {
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+
+    color: #000000;
+  }
+}
+
+@media (max-width: $sm) {
+  .reviewSummaryStats {
+    flex-direction: column;
+  }
+  .rightScoreColumn {
+    margin-left: 0;
+  }
+  .recommendContainer {
+    flex-direction: column;
+  }
+  .ellipse {
+    margin-right: 10px;
+    img {
+      height: 100px;
+      width: 100px;
+    }
+  }
+  .reviewSummaryActionInner {
+    align-items: flex-start;
+  }
+  .recommendContainer {
+    h3 {
+      margin-left: 0;
+    }
+  }
+}

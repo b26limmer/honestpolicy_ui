@@ -1,0 +1,7 @@
+@import '../../../../../scss/variables.module.scss';
+
+.disclaimerText {
+  @extend .text;
+  font-size: 18px;
+  text-align: center;
+}

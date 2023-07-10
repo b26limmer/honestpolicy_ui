@@ -1,0 +1,151 @@
+@import '../../scss/variables.module.scss';
+
+.registerForm {
+  width: 464px;
+  padding: 0 48px 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+}
+.signUpInputs {
+  display: flex;
+  flex-direction: column;
+}
+.registerFormInner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  form {
+    width: 100%;
+    margin-top: 10px;
+    > * {
+      margin-top: 15px;
+    }
+  }
+  button {
+    width: 100%;
+  }
+  .registerFormNoAccountButton {
+    width: 100%;
+  }
+}
+
+.registerFormNoAccount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registerFormTitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #081c33;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.registerFormNoAccountTitle {
+  margin-bottom: 14px;
+  font-weight: 600;
+  color: #081c33;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.registerFormButton {
+  margin-top: 15px;
+}
+
+.registerFormLogo {
+  img {
+    max-width: 230px;
+  }
+}
+
+.registerFormKeepLoggedIn {
+  font-size: 16px;
+  line-height: 19px;
+  color: #081c33;
+  font-size: 400;
+}
+
+.registerTermsCheckbox {
+  font-size: 16px;
+  line-height: 19px;
+  color: #081c33;
+  font-size: 400;
+  a {
+    color: $softGreen;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: rgba($softGreen, 0.3);
+    }
+  }
+}
+
+.signUpError {
+  color: #c0392b;
+  text-align: center;
+}
+@media (max-height: 750px) {
+  .registerFormLogo {
+    display: none;
+  }
+  .registerFormTitle {
+    margin-top: 0;
+  }
+  .registerFormNoAccountTitle {
+    margin-top: 14px !important;
+  }
+  .registerForm {
+    width: 400px;
+    padding: 0 20px 20px;
+    margin: 0 auto;
+  }
+  .registerFormInner {
+    & form > * {
+      margin-top: 10px;
+    }
+    form {
+      margin-top: 0;
+    }
+  }
+  .registerFormNoAccount {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: $lg) {
+  .registerForm {
+    width: 400px;
+    padding: 0 20px 20px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $sm) {
+  .registerForm {
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+  }
+}
+
+.registerFormNoAccount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registerFormNoAccountTitle {
+  margin-bottom: 14px;
+  font-weight: 600;
+  color: #081c33;
+  font-size: 15px;
+  margin-top: 20px;
+}

@@ -1,0 +1,83 @@
+@import '../variables.module.scss';
+.columnContainer {
+  box-sizing: border-box;
+  padding: 70px 260px;
+}
+.sectionTitle {
+  @extend .title;
+  width: 100%;
+  text-align: left;
+}
+.characteristicsContainer {
+  display: flex;
+  margin-top: 30px;
+}
+.characteristic {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  box-sizing: border-box;
+  text-align: center;
+  svg {
+    color: $newGreen;
+    height: 65px;
+    width: 65px !important;
+  }
+}
+.characteristicTitle {
+  @extend .text;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 15px 0 10px;
+}
+.ctaContainer {
+  background-color: $bgBlue;
+  padding: 40px 0;
+  width: 100%;
+  margin-top: 56px;
+}
+.ctaTitle,
+.ctaText {
+  @extend .text;
+  color: #fff;
+  text-align: center;
+}
+.ctaTitle {
+  font-size: 28px;
+  font-weight: 600;
+}
+.ctaText {
+  font-size: 18px;
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media #{$mx-large} {
+  .columnContainer {
+    padding: 70px 100px;
+  }
+}
+@media #{$mx-medium} {
+  .columnContainer {
+    padding: 70px 1em;
+  }
+  .ctaContainer{
+    box-sizing: border-box;
+    padding: 1em;
+  }
+}
+@media #{$mx-small} {
+  .columnContainer {
+    padding: 1em;
+  }
+  .characteristicsContainer {
+    flex-direction: column;
+  }
+}

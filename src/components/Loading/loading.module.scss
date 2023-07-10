@@ -1,0 +1,12 @@
+@import '../scss/variables.module.scss';
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+.lottiePlayer {
+  height: calc(var(--size) * 1px) !important;
+  min-height: calc(var(--size) * 1px) !important;
+  min-width: calc(var(--size) * 1px) !important;
+}

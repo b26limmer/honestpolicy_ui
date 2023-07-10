@@ -1,0 +1,124 @@
+@import '../../scss/variables.module.scss';
+@import '../../scss/layout/fonts.css';
+
+.accountWallet {
+  box-sizing: border-box;
+}
+
+.walletInner {
+  box-sizing: border-box;
+}
+
+.accountWalletHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.accountWalletHeaderUser {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #081c33;
+}
+
+.accountWalletBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.accountWalletRow {
+  display: flex;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-top: 1px solid #e1eaf3;
+}
+
+.accountWalletRowName {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  color: #081c33;
+  margin-right: 152px;
+  width: 160px;
+  box-sizing: border-box;
+}
+
+.accountWalletRowValue {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #081c33;
+}
+.accountWalletRowList > * {
+  margin-bottom: 12px;
+}
+
+@media #{$mx-medium} {
+  .walletDashboardLayoutInner {
+    padding: 0;
+  }
+  .walletHeader {
+    align-items: center;
+  }
+  .accountWalletHeaderUser {
+    display: flex;
+    align-items: center;
+  }
+  .accountWalletRowName {
+    width: 50%;
+    flex: 1;
+    margin-right: 15px;
+  }
+  .accountWalletRowValue {
+    width: 50%;
+    flex: 1;
+  }
+  .walletInner {
+    > div {
+      padding: 0px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .addPolicyBtn {
+    width: 100% !important;
+    &:hover {
+      background-color: $newGreen;
+      color: #fff;
+    }
+  }
+  .walletDashboardLayoutInner {
+    padding: 0 1em;
+  }
+  .WalletInner {
+    > div {
+      padding: 0px;
+    }
+  }
+
+  .box {
+    padding: 15px;
+  }
+
+  .panelBody {
+    .infoWrapper {
+      display: block;
+      .label {
+        margin-bottom: 8px;
+      }
+      .value,
+      .label {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.walletDashboardLayoutInner {
+  background-color: transparent;
+}

@@ -1,0 +1,200 @@
+@import '../variables.module.scss';
+.columnContainer {
+  background: linear-gradient(#ffffff, #f1f9f5);
+  padding: 50px 0 200px;
+  position: relative;
+}
+.title {
+  font-weight: 400;
+  font-size: 38px;
+  margin-bottom: 18px;
+  color: $bgBlue;
+}
+.text {
+  font-size: 18px;
+  width: 700px;
+  text-align: center;
+  line-height: 32px;
+}
+.descriptionsContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.animationContainer {
+  display: flex;
+  width: 700px;
+  margin: 70px auto 0;
+}
+.lottiePlayer {
+  height: 100%;
+}
+.smartScoreContainer {
+  position: relative;
+  bottom: 70px;
+  margin-bottom: -30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+}
+.doubleShieldImg {
+  position: relative;
+  z-index: 0;
+}
+.smartScore {
+  @extend .fontOneSemibold;
+  width: 100px;
+  position: absolute;
+  margin: 0;
+  font-size: 30px;
+  line-height: 35px;
+  left: 50px;
+  color: #fff;
+  z-index: 1;
+}
+.smartDescription {
+  @extend .text;
+  width: fit-content;
+  color: $darkGreen;
+  font-weight: 600;
+  cursor: help;
+  margin: 0;
+  margin-left: 1em;
+  text-decoration: underline;
+}
+.descriptionContainer {
+  display: flex;
+  align-items: center;
+  margin: 1em 70px;
+  position: relative;
+}
+.tooltip {
+  @include borderContainer;
+  padding: 1em;
+  background-color: #fff;
+  position: absolute;
+  z-index: 10;
+  left: calc(50% - 150px);
+  bottom: 30px;
+  width: 300px;
+}
+.hide {
+  display: none;
+}
+.getQuotesButton {
+  margin-top: 80px;
+  width: 260px;
+  height: 50px;
+  padding: 0;
+}
+.getQuoteContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.getQuoteText {
+  @extend .text;
+  font-size: 14px;
+  color: #2e2e2e;
+  margin-top: 12px;
+}
+
+.helpContainer {
+  position: absolute;
+  box-sizing: border-box;
+  bottom: calc(0px - (var(--heightStyleVar) / 2));
+  background-color: #020080;
+  width: 922px;
+  padding: 40px 30px;
+  a {
+    color: #fff;
+  }
+  h3,
+  p {
+    color: #fff;
+    @extend .fontOneRegular;
+    text-align: center;
+    font-size: 18px;
+  }
+  display: flex;
+  flex-direction: column;
+  h3 {
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    @extend .fontOneRegular;
+    strong {
+      @extend .fontOneSemibold;
+    }
+  }
+}
+@media #{$mx-medium} {
+  .title {
+    font-size: 30px;
+  }
+  .text {
+    font-size: 18px;
+  }
+  .title,
+  .text {
+    box-sizing: border-box;
+    padding: 0 0.5em;
+    text-align: center;
+  }
+  .text {
+    width: 100%;
+  }
+  .lottiePlayer {
+    width: 100%;
+  }
+  .descriptionsContainer {
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 0 60px;
+    box-sizing: border-box;
+  }
+  .descriptionContainer {
+    margin: 28px 0 0;
+    padding: 0 0.5em;
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+  }
+  .smartDescription {
+    width: fit-content;
+  }
+  .getQuoteText {
+    box-sizing: border-box;
+    padding: 0 0.5em;
+  }
+  .helpContainer {
+    h3,
+    p {
+      text-align: center;
+    }
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      line-height: 32px;
+      margin-top: 1em;
+      font-size: 18px;
+    }
+  }
+}
+@media #{($mx-medium)} {
+  .animationContainer {
+    width: calc(100% - 2em);
+  }
+}
+@media #{($mx-small)} {
+  .smartScoreContainer {
+    bottom: 0;
+  }
+  .helpContainer {
+    width: 100%;
+  }
+}

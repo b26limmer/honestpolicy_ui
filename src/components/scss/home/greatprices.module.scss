@@ -1,0 +1,136 @@
+@import '../variables.module.scss';
+
+.container {
+  justify-content: flex-start;
+}
+.greenBg {
+  background-color: $softGreen;
+  border-radius: 0 0 0 90px/30%;
+  display: flex;
+  justify-content: flex-end;
+}
+.textContainer {
+  width: calc(50vw / 0.8);
+  padding: 0 10vw;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.subtitle {
+  color: #fff;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+.subtitle:before {
+  content: '';
+  position: absolute;
+  left: calc(50% - 25px);
+  top: 0;
+  height: 0;
+  width: 50px;
+  border: 2px solid #fff;
+}
+.cardsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10%;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 45%;
+  box-sizing: border-box;
+  padding: 15px;
+  height: 220px;
+}
+.cardTitle {
+  @extend .fontOneSemibold;
+  color: $strongBlue;
+  margin: 5px 0;
+}
+.cardDate {
+  @extend .fontOneRegular;
+  color: $softGrey;
+  font-size: 12px;
+  margin: 0;
+}
+.cardPrice {
+  @extend .fontOneMedium;
+  font-size: 30px;
+  margin: 20px 0;
+  display: flex;
+}
+.cardPrice:before {
+  content: '$';
+  font-size: 15px;
+  align-self: flex-start;
+  justify-self: flex-start;
+}
+.reusableButton {
+  width: 180px;
+  margin: 0 0 5px;
+}
+.text {
+  color: #fff;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: $xl) {
+  .cardsContainer {
+    margin: 10px 0;
+    padding: 0 15%;
+  }
+  .textContainer {
+    padding: 0;
+  }
+  .card {
+    width: fit-content;
+    height: fit-content;
+  }
+  .cardPrice {
+    margin: 10px 0;
+  }
+  .reusableButton {
+    width: 100%;
+  }
+  .textContainer {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: $md) {
+  .textContainer {
+    box-sizing: border-box;
+    padding: 20px 0;
+  }
+  .cardsContainer {
+    flex-direction: column-reverse;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    height: 450px;
+  }
+  .subtitle {
+    text-align: center;
+    margin: 0 0 12px;
+  }
+  .card {
+    width: 200px;
+    height: 200px;
+    justify-content: space-between;
+  }
+  .text {
+    font-size: 15px;
+    text-align: center;
+  }
+}

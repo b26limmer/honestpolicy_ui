@@ -1,0 +1,48 @@
+@import '../../../scss/variables.module.scss';
+
+.carrierNavbar {
+  font-family: Montserrat, sans-serif;
+  box-shadow: 0px 5px 20px rgba(15, 52, 86, 0.05), inset 0px -1px 0px #dee8f0;
+  background-color: transparent;
+  border: 1px solid #e9f1f7;
+  background-color: #fff;
+}
+
+.carrierNavbarInner {
+  display: flex;
+  height: 100%;
+}
+
+.carrierNavbarItem {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  cursor: pointer;
+  margin-right: 30px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    color: $softGreen;
+  }
+}
+
+.carrierNavbarItemActive {
+  border-color: $softGreen;
+  color: $softGreen;
+}
+
+@media (max-width: $md) {
+  .carrierNavbar {
+    overflow-x: auto;
+  }
+}
+@media (max-width: $sm) {
+  .carrierNavbar {
+    display: none;
+  }
+}

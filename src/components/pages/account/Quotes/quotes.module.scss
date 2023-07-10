@@ -1,0 +1,477 @@
+@import '../../../scss/variables.module.scss';
+
+.quotes {
+  box-sizing: border-box;
+}
+.quotesInner {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+.subtitleText {
+  @extend .fontOneRegular;
+  margin: 0;
+}
+.shieldLoadingContainer {
+  height: 14px;
+}
+.packageInfoTable {
+  width: 100%;
+  tr {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+  }
+  tbody {
+    tr {
+      td:nth-child(1) {
+        width: 60%;
+      }
+      td:nth-child(2) {
+        width: 40%;
+      }
+    }
+  }
+}
+.lastQuoteBtn {
+  background-color: $newGreen;
+}
+
+.packageTitle {
+  width: 100%;
+  position: relative;
+  margin: 0;
+}
+.packagesOptionContainer {
+  width: 100%;
+  display: flex;
+}
+.packageOptionContainer {
+  border: 1px solid $borderGrey;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+}
+.quoteId {
+  @extend .packageOptionContainer;
+  padding-left: 50px;
+}
+.packageOption {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background-color: transparent;
+  h3 {
+    font-size: 20px;
+    text-align: left;
+  }
+  p {
+    text-align: left;
+    margin: 0;
+    font-style: italic;
+    font-size: 14px;
+  }
+}
+.selectedPackageOption {
+  position: absolute;
+  z-index: 2;
+  background-color: $bgBlue;
+  height: 110%;
+  bottom: 0;
+  h3,
+  p {
+    color: #fff;
+    position: relative;
+    z-index: 2;
+  }
+  button {
+    background-color: #fff;
+    color: $bgBlue;
+  }
+}
+.selectedIndicator {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 0;
+  z-index: 1;
+  left: calc(50% - 25px);
+  transform: rotateZ(45deg);
+  background-color: $bgBlue;
+}
+.quotesHeaderContainer {
+  display: flex;
+  background-color: #fff;
+}
+
+.dashboardLayout {
+  padding-top: 0;
+  padding-left: 0;
+  background: linear-gradient(180deg, #ffffff, #f1f9f5);
+}
+
+.tooltipButton {
+  @extend .fontOneSemibold;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 5px;
+  cursor: pointer;
+  background-color: $newGreen;
+  border-radius: 100%;
+  border: none;
+  color: #fff;
+  height: 20px;
+  font-size: 14px;
+  width: 20px;
+}
+.packageType {
+  display: flex !important;
+  justify-content: center !important;
+  font-size: 24px;
+}
+.headRow {
+  background-color: #fafafa;
+  font-size: 14px !important;
+  th:nth-child(1) {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  th:nth-child(2) {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+.closeButton {
+  font-size: 20px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+.quotesRightSide {
+  flex: 1;
+  margin-left: 16px;
+}
+.quotesAutoList {
+  box-sizing: border-box;
+  padding: 20px 0 20px 50px;
+}
+.insuredAssetName {
+  color: $newGreen;
+  border-bottom: 2px dashed $newGreen;
+  padding: 5px 0;
+  cursor: pointer;
+}
+.assetTypeIcon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+.sortDownIcon {
+  color: $newGreen;
+  font-size: 24px;
+  margin-left: 10px;
+}
+.assetDetails {
+  position: absolute;
+  width: 480px;
+  z-index: 1;
+  background-color: #fff;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  border: 1px solid #e8f2f0;
+  box-shadow: 4px 4px 20px 0 transparentize($color: #0cad84, $amount: 0.9);
+  border-radius: 4px;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    tr {
+      border-bottom: 1px solid #dbdbdb;
+    }
+  }
+}
+.quotesFilter {
+  margin-top: 2rem;
+  padding-left: 50px;
+  padding-bottom: 5px;
+  h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+  }
+  .quotesFilterSelect {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    & > div {
+      width: auto;
+      select {
+        @extend .fontOneSemibold;
+        border-radius: 4px;
+        width: 225px;
+        border: 2px solid #dbdbdb;
+        color: $color-black-1;
+        &:focus {
+          outline: none;
+        }
+        &:active {
+          border: 2px solid $color-black-1;
+        }
+      }
+    }
+  }
+}
+.quotesDetails {
+  hr {
+    margin: 5px 0;
+  }
+  & > div {
+    margin: 0;
+    display: flex;
+    label {
+      flex: 1;
+      width: 140px;
+    }
+    h5 {
+      margin: 0;
+      flex: 2;
+      justify-content: flex-start;
+      display: flex;
+    }
+    span {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      svg {
+        color: $softGrey;
+      }
+    }
+  }
+}
+
+.quotesUser {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.quotesUserName {
+  margin-left: 5px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 19px;
+}
+
+.quotesCar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e1eaf3;
+  &:first-child {
+    border-top: 1px solid #e1eaf3;
+  }
+}
+
+.quotesCarName {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: #081c33;
+}
+
+.quotesCarCheckbox {
+  * {
+    min-width: auto;
+  }
+  > * {
+    transform: scale(0.6);
+  }
+}
+
+.quotesEditForm {
+  font-size: 14px;
+  line-height: 17px;
+  color: $darkGreen;
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+  span {
+    margin-left: 9px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.assetDetailsCloseIcon {
+  @extend .closeButton;
+  font-size: 15px;
+  top: 0.5em;
+  right: 1em;
+}
+.blueBoxContainer {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #020080;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin-right: -40px;
+  color: #fff;
+}
+.blueBoxTextContainer {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 578px;
+  text-align: center;
+}
+.blueBoxTitle {
+  @extend .fontOneSemibold;
+  font-size: 32px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+.blueBoxText {
+  @extend .blueBoxTitle;
+  font-size: 18px;
+  margin: 16px 0 1em;
+  a {
+    color: #fff;
+  }
+}
+.openHoursText {
+  @extend .fontOneRegular;
+  font-size: 14px;
+  margin: 1em 0 0;
+}
+.otherInsurersTitle {
+  @extend .fontOneSemibold;
+  font-size: 32px;
+  color: $bgBlue;
+  margin: 33px 0 15px;
+}
+.otherInsurersText {
+  @extend .otherInsurersTitle;
+  font-size: 18px;
+  color: $darkestGrey;
+  margin: 0 0 19px;
+}
+@media (max-width: $lg) {
+  .quotesHeaderContainer {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .quotesFilter {
+    padding: 0 0 0 1em;
+  }
+  .quoteId {
+    padding-left: 0;
+    text-align: center;
+  }
+  .quotesAutoList {
+    padding: 20px 0 20px 1em;
+  }
+}
+@media (max-width: $md) {
+  .quotesAutoList {
+    padding: 0;
+  }
+  .quotesInner {
+    flex-direction: column-reverse;
+  }
+  .quotesRightSide {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .quotesAvatarCars {
+    display: block;
+  }
+
+  .quotesAvatarIcon {
+    display: block;
+  }
+  .dashboardLayout {
+    padding-right: 0;
+  }
+  .quotesFilter {
+    padding-left: 0;
+    justify-content: space-between;
+  }
+  .blueBoxTextContainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: $sm) {
+  .blueBoxContainer {
+    padding: 30px 1em;
+  }
+  .quoteId {
+    padding: 0;
+    h3 {
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+  .quotesFilter {
+    padding: 0 1em;
+    h4 {
+      font-size: 16px;
+    }
+  }
+  .quotesFilterContainer {
+    width: 100%;
+    margin-top: 22px;
+  }
+  .assetDetails {
+    max-width: calc(100% - 2em);
+  }
+  .quotesFilterSelect {
+    margin-top: 1em;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .quotesDetails {
+    margin-top: 20px !important;
+  }
+  .quotesAutoList {
+    box-sizing: border-box;
+    padding: 20px 1em;
+  }
+  .packageOption {
+    padding: 20px 15px 40px;
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .tooltipButton {
+    right: calc(50% - 10px);
+    top: 55px;
+  }
+  .packageInfoTable {
+    tr {
+      padding: 10px;
+    }
+  }
+}
